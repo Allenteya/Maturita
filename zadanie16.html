@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<title> Z·klady informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Vöetko, Ëo potrebujeö vedieù na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="TeÛria.html"><span class="light">TeÛria</span></a></li>
+    <li><a class="button" href=""><span class="light">Z·klady programovania</span></a></li>
+    <li><a class="button" href="jednoduchÈ programy.html"><span class="darken">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">ZaujÌmavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li><a href="jednoduchÈ programy.html">JednoduchÈ programy</a></li>
+      <li><a href="zadanie01.html">Program 01</a></li>
+      <li><a href="zadanie02.html">Program 02</a></li>
+      <li><a href="zadanie03.html">Program 03</a></li>
+      <li><a href="zadanie04.html">Program 04</a></li>
+      <li><a href="zadanie05.html">Program 05</a></li>
+      <li><a href="zadanie06.html">Program 06</a></li>
+      <li><a href="zadanie07.html">Program 07</a></li>
+      <li><a href="zadanie08.html">Program 08</a></li>
+      <li><a href="zadanie09.html">Program 09</a></li>
+      <li><a href="zadanie10.html">Program 10</a></li>
+      <li><a href="zadanie11.html">Program 11</a></li>
+      <li><a href="zadanie12.html">Program 12</a></li>
+      <li><a href="zadanie13.html">Program 13</a></li>
+      <li><a href="zadanie14.html">Program 14</a></li>
+      <li><a href="zadanie15.html">Program 15</a></li>
+      <li class="left"><a href="zadanie16.html">Program 16</a></li>
+      <li><a href="zadanie17.html">Program 17</a></li>
+      <li><a href="zadanie18.html">Program 18</a></li>
+      <li><a href="zadanie19.html">Program 19</a></li>
+      <li><a href="zadanie20.html">Program 20</a></li>
+      <li><a href="zadanie21.html">Program 21</a></li>
+      <li><a href="zadanie22.html">Program 22</a></li>
+      <li><a href="zadanie23.html">Program 23</a></li>
+      <li><a href="zadanie24.html">Program 24</a></li>
+      <li><a href="zadanie25.html">Program 25</a></li>
+      <li><a href="zadanie26.html">Program 26</a></li>
+      <li><a href="zadanie27.html">Program 27</a></li>
+      <li><a href="zadanie28.html">Program 28</a></li>
+      <li><a href="zadanie29.html">Program 29</a></li>
+      <li><a href="zadanie30.html">Program 30</a></li>
+    </ul>
+  </div>
+
+   <div class="para1"><h3 class="right">Program 16</h3><h4 class="right">Pracovn˝ n·zov: SlovnÌk.</h4><p>
+&nbsp&nbsp&nbsp&nbsp Program na sk˙öanie prekladu slovÌËok zo slovenËiny do angliËtiny, priËom spÂÚa nasledovnÈ poûiadavky:
+<ul>
+  <li>SlovÌËka v slovenËine uloûenÈ v textovom s˙bore Slov.txt postupne vypisuje na obrazovke a po z·pise jeho anglickej verzie z kl·vesnice, urËite spr·vnosù alebo nespr·vnosù odpovede.</li>
+  <li>UrËÌ celkov˝ poËet spr·vnych a nespr·vnych odpovedÌ z desiatich odpovedÌ.</li>
+  <li>Ozn·mkuje odpoveÔ. Ak je spr·vne spr·vne 40-60% odpovedÌ: zn·mka 4, 61-80% odpovedÌ: zn·mka 3, 81-95% odpovedÌ: zn·mka 2, nad 95% odpovedÌ: zn·mka 1</li>
+</ul>
+<br><br><strong>1. rieöenie</strong><br><br>
+program zadanie46;<br>
+uses crt;<br>
+var x,z,y,i,j:integer;<br>
+&nbsp&nbsp  pr:real;<br>
+&nbsp&nbsp  a,b,c:string;<br>
+&nbsp&nbsp  sub1,sub2:text;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  assign(sub1,'E:\zadanie46.txt');<br>
+&nbsp&nbsp  reset(sub1);<br>
+&nbsp&nbsp  assign(sub2,'E:\zadanie462.txt');<br>
+&nbsp&nbsp  reset(sub2);<br>
+&nbsp&nbsp  writeln('napis po anglicky');<br>
+&nbsp&nbsp  x:=0;<br>
+&nbsp&nbsp  z:=0;<br>
+&nbsp&nbsp  y:=0;<br>
+&nbsp&nbsp  pr:=0;<br>
+&nbsp&nbsp  while not (eof(sub1)) or (y>9) do begin<br>
+&nbsp&nbsp&nbsp&nbsp    readln(sub1,a);<br>
+&nbsp&nbsp&nbsp&nbsp    readln(sub2,b);<br>
+&nbsp&nbsp&nbsp&nbsp    inc(y);<br>
+&nbsp&nbsp&nbsp&nbsp    write(a,':');<br>
+&nbsp&nbsp&nbsp&nbsp    readln(c);<br>
+&nbsp&nbsp&nbsp&nbsp    c:=LowerCase(c);<br>
+&nbsp&nbsp&nbsp&nbsp    b:=LowerCase(b);<br>
+&nbsp&nbsp&nbsp&nbsp    if b=c then inc(x);<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  writeln('spravne odpovede: ',x);<br>
+&nbsp&nbsp  writeln('nespravne odpovede: ',y-x);<br>
+&nbsp&nbsp  pr:=x/y*100;<br>
+&nbsp&nbsp  if pr>95 then write('znamka: 1')<br>
+&nbsp&nbsp  else if pr>80 then write('znamka: 2')<br>
+&nbsp&nbsp  else if pr>60 then write('znamka: 3')<br>
+&nbsp&nbsp  else if pr>40 then write('znamka: 4')<br>
+&nbsp&nbsp  else write('znamka: 5');<br>
+&nbsp&nbsp  readln;<br>
+end.<br><br>
+
+<strong>2.rieöenie</strong><br><br>
+program zadanie46;<br>
+uses crt;<br>
+var a,b,c,d:string;<br>
+&nbsp&nbsp  x,z,y,i:integer;<br>
+&nbsp&nbsp  sub1,sub2:text;<br>
+begin<br>
+&nbsp&nbsp  assign(sub1,'E:\zadanie46.txt');<br>
+&nbsp&nbsp  reset(sub1);<br>
+&nbsp&nbsp  assign(sub2,'E:\zadanie462.txt');<br>
+&nbsp&nbsp  reset(sub2);<br>
+&nbsp&nbsp  write('pocet slovicok: ');<br>
+&nbsp&nbsp  readln(x);<br>
+&nbsp&nbsp  y:=0;<br>
+&nbsp&nbsp  for i:=1 to x do begin<br>
+&nbsp&nbsp&nbsp&nbsp    readln(sub1,a);<br>
+&nbsp&nbsp&nbsp&nbsp    write(a,':');<br>
+&nbsp&nbsp&nbsp&nbsp    read(b);<br>
+&nbsp&nbsp&nbsp&nbsp    b:=upcase(b);<br>
+&nbsp&nbsp&nbsp&nbsp    readln(sub2,c);<br>
+&nbsp&nbsp&nbsp&nbsp    c:=upcase(c);<br>
+&nbsp&nbsp&nbsp&nbsp    if b=c then begin writeln('  spravna odpoved');<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      inc(y);<br>
+&nbsp&nbsp&nbsp&nbsp    end<br>
+&nbsp&nbsp&nbsp&nbsp    else writeln('  nespravna odpoved');<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  close(sub1);<br>
+&nbsp&nbsp  close(sub2);<br>
+&nbsp&nbsp  if y/x>0.95 then z:=1<br>
+&nbsp&nbsp  else if y/x>0.80 then z:=2<br>
+&nbsp&nbsp  else if y/x>0.60 then z:=3<br>
+&nbsp&nbsp  else if y/x>0.40 then z:=4<br>
+&nbsp&nbsp  else z:=5;<br>
+&nbsp&nbsp  writeln('tvoja znamka: ',z);<br>
+&nbsp&nbsp  write('pocet spravnych odpovedi: ',y,'   percentil: ',y/x*100:0);<br>
+&nbsp&nbsp  readln;<br>
+end.<br>
+
+
+  </p>
+</div>
+
+
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaËiatok str·nky</strong></a></p>
+
+</body>

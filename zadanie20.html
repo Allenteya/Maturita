@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<title> Základy informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Všetko, èo potrebuješ vedie na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="Teória.html"><span class="light">Teória</span></a></li>
+    <li><a class="button" href=""><span class="light">Základy programovania</span></a></li>
+    <li><a class="button" href="jednoduché programy.html"><span class="darken">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">Zaujímavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li><a href="jednoduché programy.html">Jednoduché programy</a></li>
+      <li><a href="zadanie01.html">Program 01</a></li>
+      <li><a href="zadanie02.html">Program 02</a></li>
+      <li><a href="zadanie03.html">Program 03</a></li>
+      <li><a href="zadanie04.html">Program 04</a></li>
+      <li><a href="zadanie05.html">Program 05</a></li>
+      <li><a href="zadanie06.html">Program 06</a></li>
+      <li><a href="zadanie07.html">Program 07</a></li>
+      <li><a href="zadanie08.html">Program 08</a></li>
+      <li><a href="zadanie09.html">Program 09</a></li>
+      <li><a href="zadanie10.html">Program 10</a></li>
+      <li><a href="zadanie11.html">Program 11</a></li>
+      <li><a href="zadanie12.html">Program 12</a></li>
+      <li><a href="zadanie13.html">Program 13</a></li>
+      <li><a href="zadanie14.html">Program 14</a></li>
+      <li><a href="zadanie15.html">Program 15</a></li>
+      <li><a href="zadanie16.html">Program 16</a></li>
+      <li><a href="zadanie17.html">Program 17</a></li>
+      <li><a href="zadanie18.html">Program 18</a></li>
+      <li><a href="zadanie19.html">Program 19</a></li>
+      <li class="left"><a href="zadanie20.html">Program 20</a></li>
+      <li><a href="zadanie21.html">Program 21</a></li>
+      <li><a href="zadanie22.html">Program 22</a></li>
+      <li><a href="zadanie23.html">Program 23</a></li>
+      <li><a href="zadanie24.html">Program 24</a></li>
+      <li><a href="zadanie25.html">Program 25</a></li>
+      <li><a href="zadanie26.html">Program 26</a></li>
+      <li><a href="zadanie27.html">Program 27</a></li>
+      <li><a href="zadanie28.html">Program 28</a></li>
+      <li><a href="zadanie29.html">Program 29</a></li>
+      <li><a href="zadanie30.html">Program 30</a></li>
+    </ul>
+  </div>
+
+<div class="para1"><h3 class="right">Program 20</h3><h4 class="right">Pracovnı názov: Urèenie BMI.</h4><p>
+&nbsp&nbsp&nbsp&nbsp V textovom súbore súzapísané hmotnosti a vıšky iakov triedy. V jednom riadku je informácia o jednom iakovi v tvare: hmotnos v kg a vıška v m. Program bude poèíta BMI index kadého iaka. BMI je telesnı hmotnostnı index, ktorı sa vypoèíta ako podiel hmotnosti a kilogramoch a vıšky v metroch na druhú.<br>
+<ul>
+  <li>BMI < 18,5 – podváha</li>
+  <li>18,5 <= BMI < 25 – normálna hmotnos</li>
+  <li>25 <= BMI < 30 – nadváha</li>
+  <li>BMI > 30 – obezita</li>
+</ul>
+a) Pre kadého iaka vypíše jeho BMI index.<br>
+b) Zistí, ko¾ko iakov má podváhu.<br>
+c) Zistí, ko¾ko percent iakov je obéznych.<br><br>
+Pomôcky:<br>
+ &nbsp&nbsp&nbsp&nbsp Textovı súbor v elektronickej forme  30BMI.txt
+Ukáka obsahu textového súboru:<br>
+&nbsp&nbsp&nbsp&nbsp 70 1.70<br>
+&nbsp&nbsp&nbsp&nbsp 65 1.65<br>
+&nbsp&nbsp&nbsp&nbsp 75 1.80<br><br>
+<strong>1. riešenie</strong><br><br>
+program zadanie50;<br>
+uses crt;<br>
+var x,y,i,k,l,h:integer;<br>
+&nbsp&nbsp  sub:text;<br>
+&nbsp&nbsp  z,j:real;<br>
+&nbsp&nbsp  a,b,c:string;<br>
+&nbsp&nbsp  d:char;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  assign(sub,'E:\zadanie50.txt');<br>
+&nbsp&nbsp  reset(sub);<br>
+&nbsp&nbsp  i:=1;<br>
+&nbsp&nbsp  l:=0;<br>
+&nbsp&nbsp  while not eof(sub) do begin<br>
+&nbsp&nbsp&nbsp&nbsp    readln(sub,k,d,a);<br>
+&nbsp&nbsp&nbsp&nbsp    val(a[1],y);<br>
+&nbsp&nbsp&nbsp&nbsp    a:=a[3]+a[4];<br>
+&nbsp&nbsp&nbsp&nbsp    val(a,x);<br>
+&nbsp&nbsp&nbsp&nbsp    z:=y+x/100;<br>
+&nbsp&nbsp&nbsp&nbsp    j:=k/sqr(z);<br>
+&nbsp&nbsp&nbsp&nbsp    writeln(i,'. ziak ma bmi: ',j:0:2);<br>
+&nbsp&nbsp&nbsp&nbsp    inc(i);<br>
+&nbsp&nbsp&nbsp&nbsp    if j<18.5 then inc(l);<br>
+&nbsp&nbsp&nbsp&nbsp    if j>30 then inc(h);<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  close(sub);<br>
+&nbsp&nbsp  writeln('podvahu maju: ',l);<br>
+&nbsp&nbsp  writeln('obeznych je: ',h);<br>
+&nbsp&nbsp  readln;<br>
+end.<br><br>
+
+
+
+
+
+  </p>
+</div>
+
+
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaèiatok stránky</strong></a></p>
+
+</body>

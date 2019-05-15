@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<title> Základy informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Všetko, èo potrebuješ vedie na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="Teória.html"><span class="darken">Teória</span></a></li>
+    <li><a class="button" href=""><span class="light">Základy programovania</span></a></li>
+    <li><a class="button" href="jednoduché programy.html"><span class="light">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">Zaujímavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li><a href="03_Grafická informácia.html">3.Grafická informácia</a></li>
+      <li class="left"><a href="04_zvukova informacia.html"><strong>4.Zvúkova informácia</strong></a></li>
+      <li><a href="06_Kybernetická bezpeènos.html"><strong>6.Kybernetická bezpeènos</strong></a></li>
+      <li><a href="07_èíselné sústavy.html"><strong>7.èíselné sústavy</strong></a></li>
+      <li><a href="08_Webové prehliadaèe.html"><strong>8.Webové prehliadaèe</strong></a></li>
+      <li><a href="10_Základné pojmy poèítaèovıch systémov.html"><strong>10.Základné pojmy poèítaèovıch systémov</strong></a></li>
+      <li><a href="11_Operaènı systém.html"><strong>11.Operaènı systém</strong></a></li>
+      <li><a href="14_Poèítaèová sie.html"><strong>14.Poèítaèová sie</strong></a></li>
+      <li><a href="16_ Von Neuman.html"><strong>16.Von Neuman</strong></a></li>
+      <li><a href="20_difitalizacia dokumentu.html"><strong>20.Difitalizácia dokumentu</strong></a></li> 
+    </ul>
+  </div>
+<div class="para1"><h3 class="right">4. Zvuková informácia</h3>
+
+
+&nbsp&nbsp&nbsp&nbspAko získame zvukové informácie do poèítaèa? <br>
+nahrávanie zvuku(mikrofon) , prehratie externého zvuk. média, úprava zvuku v danom editore...<br><br>
+
+&nbsp&nbsp&nbsp&nbspPopíšte princíp digitalizácie zvuku a jeho ïalšej úpravy. <br>
+vzorkovanie- Zvuková karta PC zaznamenáva aktuálne hodnoty analógového signálu(vstup cez mikrofon) v pravidelnıch intervaloch s istou tzv. vzorkovacou frekvenciou. V praxi sa pouíva vzorkovacia frekvencia 44,1kHz. Èím je vyššia vzorkovacia frekvencia, tım kvalitnejší zvuk získame.<br>
+kvantovanie- namerané hodnoty sa zaokrúh¾ujú na najblišiu úroveò amplitúdy kadej vzorky, preto má digitálny signál na rozdiel od analógového schodovitı priebeh <br>
+kódovanie- Pri kódovaní zvuku hudobného CD sa pouíva 16 bitové kódovanie- t.z e kadú vzorku zakódujeme 16- ticou jednotiek a núl - všetkıch monıch napäovıch úrovní signálu, teda môe by  216 =65 536<br><br>
+
+&nbsp&nbsp&nbsp&nbspAké sú parametre charakterizujúce zvuk?<br>
+frekvencia- urèuje ich vıšku, zvukové spektrum môe by <br>
+nízke - basové tóny, hrom(16-170Hz), ¾udskı hlas- 400Hz, <br>
+vysoké tóny-píšala- 6-20kHz<br>
+intenzita -hlasitos (dB)- 20dB šepot, 50dB rozhovor, 125dB vıbuch silnej petardy<br>
+farba hlasu- závisí od pôvodu, je jedineèná, medzi tónmi vnímame rozdiely, ucho vyhodnocuje frekvenciu a amplitúdu jednotlivıch dielèích kmitov ako celkovı vnem – vnem farby zvuku<br><br>
+
+&nbsp&nbsp&nbsp&nbspAké mnostvo pamäte je potrebné na záznam piesne do poèítaèa s kvalitou CD, mono, 16 bitov na vzorku  a s dåkou trvania 1 minúta bez komprimácie?<br>
+44100 Hz * 16(bitove kodovanie) * (2) * 60(s) = 84672000 <br>
+&nbsp&nbsp&nbsp   (CD kvalita - vzorkovacia frekvencia) * pocet kanalov <br>
+84672000 / 8 = 10584000   //premena na byte<br>
+10584000 / 1024 / 1024 = 10,09368896484375 = 10.1 MB     //premena na MB (1MB = 1024*1024 B)<br>
+Princíp kódovania audio signálov pomocou PCM (vzorkovanie, kvantovanie, kódovanie)<br>
+Wave- Digitalizácia, zvuku analógovo - digitálny prevodník, vzorkovaním, kvantovaníma kódovaním, pomerne narocne na pamat<br><br>
+
+&nbsp&nbsp&nbsp&nbspStal sa štandardom na záznam zvuku v operaènıch systémoch Windows. Metódou záznamu dát je najèastejšie Pulse Code Modulation (PCM), ukladajúca nekomprimované dáta (Existujú však i ïalšie spôsoby, ktoré Wave formát podporuje. <br>
+Princíp uloenia zvuku v tomto formáte popisuje digitalizácia zvuku: Digitalizáícia zvuku Prevod zvuku z analógovej podoby do digitálnej zabezpeèuje A/D - analógovo - digitálny prevodník. Skôr ako sa z analógového signálu stane PCM zvuk, musí najprv prejs vzorkovaním, kvantovaním a kódovaním.<br><br>
+
+&nbsp&nbsp&nbsp&nbspMidi-umelé vytváranie zvuku, nenároèné na pamä, nedá sa nahovori prejav<br><br>
+
+&nbsp&nbsp&nbsp&nbspKeby sme chceli jednoducho a vıstine porovna súbor MIDI s nieèím z beného ivota, mohli by sme poveda, e je to notovı zápis, pod¾a ktorého poèítaè dokáe reprodukova hudbu. <br>
+Vıhodou súborov MIDI je, e na minútu záznamu potrebujú ove¾a menší úlonı priestor ako ostatné formáty. Priemernú skladbu mono uloi do 25 kB, do 100 kB sa dá uloi aj skladba trvajúca nieko¾ko desiatok minút. <br>
+Nevıhodou je, e skladba vo formáte MIDI sa nemusí prehra rovnako kvalitne na všetkıch poèítaèoch. Je to rovnaké, ako keï autor skladby skomponuje dokonalú skladbu, neznamená to automaticky, e skladba bude interpretovaná dokonalım hudobníkom na kvalitnom hudobnom nástroji. V našom prípade je hudobníkom zvuková karta poèítaèa. Od jej kvality a kvality vzoriek zvukov jednotlivıch hudobnıch nástrojov, ktoré do nej uloíme, závisí ako nakoniec skladba vyznie. <br>
+&nbsp&nbsp&nbsp&nbsp Ïalšou nevıhodou je, e do súboru MIDI mono zapísa iba to, èo sa dá zahra na hudobnom nástroji. Nemono doò uloi spev alebo nahovori prejav.<br>
+
+
+
+  </p>
+</div>
+
+
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaèiatok stránky</strong></a></p>
+
+</body>

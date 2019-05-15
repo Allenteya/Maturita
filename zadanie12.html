@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<title> Z·klady informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Vöetko, Ëo potrebujeö vedieù na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="TeÛria.html"><span class="light">TeÛria</span></a></li>
+    <li><a class="button" href=""><span class="light">Z·klady programovania</span></a></li>
+    <li><a class="button" href="jednoduchÈ programy.html"><span class="darken">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">ZaujÌmavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li><a href="jednoduchÈ programy.html">JednoduchÈ programy</a></li>
+      <li><a href="zadanie01.html">Program 01</a></li>
+      <li><a href="zadanie02.html">Program 02</a></li>
+      <li><a href="zadanie03.html">Program 03</a></li>
+      <li><a href="zadanie04.html">Program 04</a></li>
+      <li><a href="zadanie05.html">Program 05</a></li>
+      <li><a href="zadanie06.html">Program 06</a></li>
+      <li><a href="zadanie07.html">Program 07</a></li>
+      <li><a href="zadanie08.html">Program 08</a></li>
+      <li><a href="zadanie09.html">Program 09</a></li>
+      <li><a href="zadanie10.html">Program 10</a></li>
+      <li><a href="zadanie11.html">Program 11</a></li>
+      <li class="left"><a href="zadanie12.html">Program 12</a></li>
+      <li><a href="zadanie13.html">Program 13</a></li>
+      <li><a href="zadanie14.html">Program 14</a></li>
+      <li><a href="zadanie15.html">Program 15</a></li>
+      <li><a href="zadanie16.html">Program 16</a></li>
+      <li><a href="zadanie17.html">Program 17</a></li>
+      <li><a href="zadanie18.html">Program 18</a></li>
+      <li><a href="zadanie19.html">Program 19</a></li>
+      <li><a href="zadanie20.html">Program 20</a></li>
+      <li><a href="zadanie21.html">Program 21</a></li>
+      <li><a href="zadanie22.html">Program 22</a></li>
+      <li><a href="zadanie23.html">Program 23</a></li>
+      <li><a href="zadanie24.html">Program 24</a></li>
+      <li><a href="zadanie25.html">Program 25</a></li>
+      <li><a href="zadanie26.html">Program 26</a></li>
+      <li><a href="zadanie27.html">Program 27</a></li>
+      <li><a href="zadanie28.html">Program 28</a></li>
+      <li><a href="zadanie29.html">Program 29</a></li>
+      <li><a href="zadanie30.html">Program 30</a></li>
+    </ul>
+  </div>
+
+<div class="para1"><h3 class="right">Program 12</h3><h4 class="right">Pracovn˝ n·zov: Mal· n·sobilka.</h4><p>
+&nbsp&nbsp&nbsp&nbsp Program bude sk˙öaù mal˙ n·sobilku podæa t˝chto podmienok:
+<ul>
+  <li>Zad· 20 n·hodn˝ch prÌkladov.</li>
+  <li>Za spr·vnu odpoveÔ zÌska ûiak 1 bod, za nespr·vnu odpoveÔ 0 bodov.</li>
+  <li>VypÌöe zn·mku (90 a viac % - v˝born˝, od 70 po 90 % - chv·litebn˝, od 50 po 70 % - dobr˝, od 30 po 50 % - dostatoËn˝).</li>
+  <li>PrÌklady sa postupne zapisuj˙ do s˙boru a za posledn˝ sa zapÌöe zn·mka.</li>
+</ul>
+<br><br><strong>1. rieöenie</strong><br><br>
+program zadanie42;<br>
+uses crt;<br>
+var x,z,y,i,k,a,b:integer;<br>
+&nbsp&nbsp  pr:real;<br>
+&nbsp&nbsp  subor:text;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  write('zadaj pocet prikladov:');<br>
+&nbsp&nbsp  readln(x);<br>
+&nbsp&nbsp  b:=0;<br>
+&nbsp&nbsp  assign(subor,'C:\Users\c21\Desktop\zadanie42.txt');<br>
+&nbsp&nbsp  rewrite(subor);<br>
+&nbsp&nbsp  for i:=1 to x do begin<br>
+&nbsp&nbsp&nbsp&nbsp    randomize;<br>
+&nbsp&nbsp&nbsp&nbsp    z:=random(9)+1;<br>
+&nbsp&nbsp&nbsp&nbsp    y:=random(9)+1;<br>
+&nbsp&nbsp&nbsp&nbsp    write(z,'*',y,'=');<br>
+&nbsp&nbsp&nbsp&nbsp    readln(k);<br>
+&nbsp&nbsp&nbsp&nbsp    a:=z*y;<br>
+&nbsp&nbsp&nbsp&nbsp    writeln(subor,z,'*',y,'=',k);<br>
+&nbsp&nbsp&nbsp&nbsp    if k=a then inc(b);<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  pr:=b/x*100;<br>
+&nbsp&nbsp  writeln(subor,pr:0:2);<br>
+&nbsp&nbsp  write(pr:0:2,'% ');<br>
+&nbsp&nbsp  if pr>=90 then begin writeln('vyborny');<br>
+&nbsp&nbsp&nbsp&nbsp    writeln(subor,'vyborny');<br>
+&nbsp&nbsp  end<br>
+&nbsp&nbsp  else if pr>=70  then begin writeln('chvalitebny');<br>
+&nbsp&nbsp  writeln(subor,'chvalitebny');<br>
+&nbsp&nbsp  end<br>
+&nbsp&nbsp  else if pr>=50 then begin writeln('dobry');<br>
+&nbsp&nbsp  writeln(subor,'dobry');<br>
+&nbsp&nbsp  end<br>
+&nbsp&nbsp  else if pr>=30 then begin writeln('dostatocny');<br>
+&nbsp&nbsp  writeln(subor,'dostatocny');<br>
+&nbsp&nbsp  end<br>
+&nbsp&nbsp  else begin writeln('nedostatocny');<br>
+&nbsp&nbsp&nbsp&nbsp    writeln(subor,'nedostatocny');<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  close(subor);<br>
+&nbsp&nbsp  readln;<br>
+end. <br><br><strong>2.rieöenie</strong><br><br>
+
+
+program zadanie42;<br>
+uses crt;<br>
+var x,z,y,i,k,l,j:integer;<br>
+&nbsp&nbsp  subor:text;<br>
+&nbsp&nbsp  a:string;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  write('zadaj pocet prikladov: ');<br>
+&nbsp&nbsp  readln(z);<br>
+&nbsp&nbsp  assign(subor,'E:\zadanie42.txt');<br>
+&nbsp&nbsp  rewrite(subor);<br>
+&nbsp&nbsp  j:=0;<br>
+&nbsp&nbsp  for i:=1 to z do begin<br>
+&nbsp&nbsp&nbsp&nbsp    randomize;<br>
+&nbsp&nbsp&nbsp&nbsp    x:=random(10)+1;<br>
+&nbsp&nbsp&nbsp&nbsp    y:=random(10)+1;<br>
+&nbsp&nbsp&nbsp&nbsp    write(x,'*',y,'=');<br>
+&nbsp&nbsp&nbsp&nbsp    readln(k);<br>
+&nbsp&nbsp&nbsp&nbsp    writeln(subor,x,'*',y,'=',k);<br>
+&nbsp&nbsp&nbsp&nbsp    l:=x*y;<br>
+&nbsp&nbsp&nbsp&nbsp    if k=l then inc(j);<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  if j>=0.9*z then a:='vyborny'<br>
+&nbsp&nbsp  else if j>=0.7*z then a:='chvalitebny'<br>
+&nbsp&nbsp  else if j>=0.5*z then  a:='dobry'<br>
+&nbsp&nbsp  else if j>=0.3*z then a:='dostatocny'<br>
+&nbsp&nbsp  else a:='nedostatocny';<br>
+&nbsp&nbsp  write('znamka: ',a,' ',j/z*100:0:0,'%');<br>
+&nbsp&nbsp  writeln(subor,'znamka: ',a);<br>
+&nbsp&nbsp  close(subor);<br>
+&nbsp&nbsp  readln;<br>
+end.<br>
+
+
+
+  </p>
+</div>
+
+
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaËiatok str·nky</strong></a></p>
+
+</body>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<title> Základy informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Všetko, èo potrebuješ vedie na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="Teória.html"><span class="light">Teória</span></a></li>
+    <li><a class="button" href=""><span class="light">Základy programovania</span></a></li>
+    <li><a class="button" href="jednoduché programy.html"><span class="darken">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">Zaujímavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li><a href="jednoduché programy.html">Jednoduché programy</a></li>
+      <li><a href="zadanie01.html">Program 01</a></li>
+      <li><a href="zadanie02.html">Program 02</a></li>
+      <li><a href="zadanie03.html">Program 03</a></li>
+      <li><a href="zadanie04.html">Program 04</a></li>
+      <li><a href="zadanie05.html">Program 05</a></li>
+      <li><a href="zadanie06.html">Program 06</a></li>
+      <li><a href="zadanie07.html">Program 07</a></li>
+      <li><a href="zadanie08.html">Program 08</a></li>
+      <li><a href="zadanie09.html">Program 09</a></li>
+      <li><a href="zadanie10.html">Program 10</a></li>
+      <li><a href="zadanie11.html">Program 11</a></li>
+      <li><a href="zadanie12.html">Program 12</a></li>
+      <li><a href="zadanie13.html">Program 13</a></li>
+      <li><a href="zadanie14.html">Program 14</a></li>
+      <li><a href="zadanie15.html">Program 15</a></li>
+      <li><a href="zadanie16.html">Program 16</a></li>
+      <li><a href="zadanie17.html">Program 17</a></li>
+      <li><a href="zadanie18.html">Program 18</a></li>
+      <li class="left"><a href="zadanie19.html">Program 19</a></li>
+      <li><a href="zadanie20.html">Program 20</a></li>
+      <li><a href="zadanie21.html">Program 21</a></li>
+      <li><a href="zadanie22.html">Program 22</a></li>
+      <li><a href="zadanie23.html">Program 23</a></li>
+      <li><a href="zadanie24.html">Program 24</a></li>
+      <li><a href="zadanie25.html">Program 25</a></li>
+      <li><a href="zadanie26.html">Program 26</a></li>
+      <li><a href="zadanie27.html">Program 27</a></li>
+      <li><a href="zadanie28.html">Program 28</a></li>
+      <li><a href="zadanie29.html">Program 29</a></li>
+      <li><a href="zadanie30.html">Program 30</a></li>
+    </ul>
+  </div>
+<div class="para1"><h3 class="right">Program 19</h3><h4 class="right">Pracovnı názov: Meniny.</h4><p>
+&nbsp&nbsp&nbsp&nbsp Program z daného kalendára (textovı súbor) urèí, kto má dnes meniny. <br><br> Postup:<br>
+&nbsp&nbsp&nbsp&nbsp Program pomôe vedúcemu a vyhodnotí nasledovné denné zistenia:
+<ul>
+  <li>Urèí pomocou rutiny GetDate  dnešnı deò a mesiac v tvare DD.MM </li>
+  <li>Aktuálne meno vyh¾adané v textovom súbore 29kalend.txt pod¾a dnešného dátumu  vypíše na monitore (napr. na náhodnej pozícii a v náhodnej farbe).</li>
+</ul>
+&nbsp&nbsp&nbsp&nbsp Pomôcka: Textovı súbor v elektronickej forme kalend.txt<br>   
+Ukáka obsahu textového súboru:<br>
+&nbsp&nbsp&nbsp&nbsp 24.12 Adam<br>
+&nbsp&nbsp&nbsp&nbsp 22.12 Adela<br>
+&nbsp&nbsp&nbsp&nbsp 17.06 Adolf<br>
+&nbsp&nbsp&nbsp&nbsp 23.03 Adrián<br><br>
+
+<strong>1. riešenie</strong><br><br>
+program zadanie49;<br>
+uses crt,dos;<br>
+var r,d,m,t:word;<br>
+&nbsp&nbsp  sub:text;<br>
+&nbsp&nbsp  a,b,c,f:string;<br>
+&nbsp&nbsp  e:string[5];<br>
+&nbsp&nbsp  z,y,x,i,j:integer;<br>
+function prem(w:word):string;<br>
+var y:string;<br>
+&nbsp&nbsp  begin<br>
+&nbsp&nbsp  if w<10 then begin str(w,y);<br>
+&nbsp&nbsp&nbsp&nbsp    prem:='0'+y;<br>
+&nbsp&nbsp  end<br>
+&nbsp&nbsp  else str(w,prem);<br>
+&nbsp&nbsp  end;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  getdate(r,m,d,t);<br>
+&nbsp&nbsp  assign(sub,'E:\zadanie49.txt');<br>
+&nbsp&nbsp  reset(sub);<br>
+&nbsp&nbsp  write('meniny ma: ');<br>
+&nbsp&nbsp  textcolor(random(15)+1);<br>
+&nbsp&nbsp  gotoxy(random(60),random(25));<br>
+&nbsp&nbsp  c:=prem(d)+'.'+prem(m);<br>
+&nbsp&nbsp  while not eof(sub) do begin<br>
+&nbsp&nbsp&nbsp&nbsp    readln(sub,e,f);<br>
+&nbsp&nbsp&nbsp&nbsp    if c=e then write(f);<br>
+&nbsp&nbsp&nbsp&nbsp    end;<br>
+&nbsp&nbsp  close(sub);<br>
+&nbsp&nbsp  readln;<br>
+end.<br><br>
+
+
+
+
+  </p>
+</div>
+
+
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaèiatok stránky</strong></a></p>
+
+</body>

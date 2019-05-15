@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<title> Z·klady informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Vöetko, Ëo potrebujeö vedieù na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="TeÛria.html"><span class="light">TeÛria</span></a></li>
+    <li><a class="button" href=""><span class="light">Z·klady programovania</span></a></li>
+    <li><a class="button" href="jednoduchÈ programy.html"><span class="darken">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">ZaujÌmavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li><a href="jednoduchÈ programy.html">JednoduchÈ programy</a></li>
+      <li><a href="zadanie01.html">Program 01</a></li>
+      <li><a href="zadanie02.html">Program 02</a></li>
+      <li><a href="zadanie03.html">Program 03</a></li>
+      <li><a href="zadanie04.html">Program 04</a></li>
+      <li><a href="zadanie05.html">Program 05</a></li>
+      <li><a href="zadanie06.html">Program 06</a></li>
+      <li><a href="zadanie07.html">Program 07</a></li>
+      <li><a href="zadanie08.html">Program 08</a></li>
+      <li><a href="zadanie09.html">Program 09</a></li>
+      <li><a href="zadanie10.html">Program 10</a></li>
+      <li><a href="zadanie11.html">Program 11</a></li>
+      <li><a href="zadanie12.html">Program 12</a></li>
+      <li><a href="zadanie13.html">Program 13</a></li>
+      <li><a href="zadanie14.html">Program 14</a></li>
+      <li><a href="zadanie15.html">Program 15</a></li>
+      <li><a href="zadanie16.html">Program 16</a></li>
+      <li><a href="zadanie17.html">Program 17</a></li>
+      <li><a href="zadanie18.html">Program 18</a></li>
+      <li><a href="zadanie19.html">Program 19</a></li>
+      <li><a href="zadanie20.html">Program 20</a></li>
+      <li><a href="zadanie21.html">Program 21</a></li>
+      <li><a href="zadanie22.html">Program 22</a></li>
+      <li><a href="zadanie23.html">Program 23</a></li>
+      <li><a href="zadanie24.html">Program 24</a></li>
+      <li><a href="zadanie25.html">Program 25</a></li>
+      <li class="left"><a href="zadanie26.html">Program 26</a></li>
+      <li><a href="zadanie27.html">Program 27</a></li>
+      <li><a href="zadanie28.html">Program 28</a></li>
+      <li><a href="zadanie29.html">Program 29</a></li>
+      <li><a href="zadanie30.html">Program 30</a></li>
+    </ul>
+  </div>
+
+   <div class="para1"><h3 class="right">Program 26</h3><h4 class="right">Pracovn˝ n·zov: PoËet jed·l.</h4><p>
+Vytvoren˝ program bude:<br>
+a) Z textovÈho s˙boru zistÌ celkov˝ poËet jed·l na nasleduj˙ci deÚ.<br>
+b) SpoËÌta jednotliv˝ poËet jed·l a vypÌöe ich poËty (zvl·öù jednotlivÈ farby).<br>
+c) ZistÌ, Ëi si niektorÈ jedlo neobjednalo menej ako 20 æudÌ a ak ·no vypÌöe ËÌselnÈ kÛdy t˝chto stravnÌkov.<br><br>
+Riadok obsahuje ËÌseln˝ kÛd stravnÌka, ktor˝ je oddelen˝ medzerou od jedla oznaËenÈho pÌsmenkom.<br><br>
+Moûn˝ obsah textovÈho s˙boru:<br>
+&nbsp&nbsp&nbsp&nbsp2 z<br>
+&nbsp&nbsp&nbsp&nbsp5 c<br>
+&nbsp&nbsp&nbsp&nbsp4 c<br>
+&nbsp&nbsp&nbsp&nbsp3 m<br>
+&nbsp&nbsp&nbsp&nbsp1 h
+<br><br>
+
+<strong>1.rieöenie</strong><br><br>
+program zadanie26;<br>
+uses crt;<br>
+var subor:text;<br>
+&nbsp&nbsp  x,z,y,i,j,k:integer;<br>
+&nbsp&nbsp  a:string;<br>
+&nbsp&nbsp  pole1:array[1..100] of integer;<br>
+&nbsp&nbsp  pole2:array[1..100] of string;<br>
+&nbsp&nbsp  pole3:array[1..100] of integer;<br>
+&nbsp&nbsp  pole4:array[1..100] of string;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  Assign(subor,'E:\zadanie26.txt');<br>
+&nbsp&nbsp  reset(subor);<br>
+&nbsp&nbsp  z:=1;<br>
+&nbsp&nbsp  y:=0;<br>
+&nbsp&nbsp  k:=1;<br>
+&nbsp&nbsp  while not eof(subor) do begin<br>
+&nbsp&nbsp&nbsp&nbsp        readln(subor,x,a);<br>
+&nbsp&nbsp&nbsp&nbsp       pole1[z]:=x;<br>
+&nbsp&nbsp&nbsp&nbsp        pole2[z]:=a;<br>
+&nbsp&nbsp&nbsp&nbsp        inc(z);<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbspfor i:=1 to z-1 do write(pole1[i],' ',pole2[i],' , ');<br>
+&nbsp&nbspwriteln;<br>
+&nbsp&nbspwriteln('celkovy pocet jedal: ',z-1);<br>
+&nbsp&nbspwriteln('pocet jednotlivych jedal:');<br>
+&nbsp&nbspfor i:=1 to z-1 do begin<br>
+&nbsp&nbsp&nbsp&nbsp      for j:=1 to z-1 do begin<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            if (pole2[i]=pole2[j]) then inc(y);<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            if (pole2[i]=pole2[j]) and (i>j) then y:=-100;<br>
+&nbsp&nbsp&nbsp&nbsp           end;<br>
+&nbsp&nbsp&nbsp&nbsp      if y>0 then begin pole3[k]:=y;<br>
+&nbsp&nbsp&nbsp&nbsp         pole4[k]:=pole2[i];<br>
+&nbsp&nbsp&nbsp&nbsp         inc(k);<br>
+&nbsp&nbsp&nbsp&nbsp         end;<br>
+&nbsp&nbsp&nbsp&nbsp      y:=0;<br>
+&nbsp&nbspend;<br>
+&nbsp&nbspfor i:=1 to k-1 do writeln(pole3[i],' ',pole4[i]);<br>
+&nbsp&nbspwriteln('cisla stravnikov jednotlivych jedal:');<br>
+&nbsp&nbspfor i:=1 to k-1 do if pole3[i]<20 then begin<br>
+&nbsp&nbsp&nbsp&nbsp   write(pole4[i],': ');<br>
+&nbsp&nbsp&nbsp&nbsp   for j:=1 to z-1 do<br>
+&nbsp&nbsp        if pole4[i]=pole2[j] then write(pole1[j],', ');<br>
+&nbsp&nbsp   writeln;<br>
+&nbsp&nbsp   end;<br>
+&nbsp&nbspreadln;<br>
+&nbsp&nbsprepeat until keypressed;<br>
+end.<br><br>
+
+<strong>2.rieöenie</strong><br><br>
+program zadanie26;<br>
+uses crt;<br>
+var x,z,y,i,k:integer;<br>
+&nbsp&nbsp  a,b:string;<br>
+&nbsp&nbsp  subor:text;<br>
+&nbsp&nbsp  pole1,pole3:array[1..100] of string;<br>
+&nbsp&nbsp  pole2:array[1..100] of integer;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  assign(subor,'E:\zadanie26.txt');<br>
+&nbsp&nbsp  reset(subor);<br>
+&nbsp&nbsp  k:=0;<br>
+&nbsp&nbsp  pole1[1]:='';<br>
+&nbsp&nbsp  pole2[1]:=0;<br>
+&nbsp&nbsp  pole3[i]:='';<br>
+&nbsp&nbsp  y:=1;<br>
+&nbsp&nbsp  while not eof(subor) do begin<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      readln(subor,x,a);<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      inc(k);<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      z:=0;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      str(x,b);<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      for i:=1 to y+1 do<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        if pole1[i]=a then begin pole2[i]:=pole2[i]+1;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp          z:=1;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp          pole3[i]:=pole3[i]+' '+b;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        end;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      if z=0 then begin<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        pole1[y]:=a;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        pole2[y]:=1;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        pole3[y]:=b;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        inc(y);<br>
+&nbsp&nbsp&nbsp&nbsp    end;<br>
+&nbsp&nbsp  end;<br>
+&nbsp close(subor);<br>
+&nbsp writeln('pocet stravnikov: ',k);<br>
+&nbsp x:=y-1;<br>
+&nbsp for i:=1 to x do writeln(pole1[i],': ',pole2[i]);<br>
+&nbsp writeln;<br>
+&nbsp for i:=1 to x do if pole2[i]<20 then writeln(pole1[i],': ',pole3[i]);<br>
+&nbsp readln;<br>
+end.<br>
+
+  </p></div>
+</div>
+
+
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaËiatok str·nky</strong></a></p>
+
+</body>

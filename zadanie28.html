@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<title> Základy informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Všetko, èo potrebuješ vedie na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="Teória.html"><span class="light">Teória</span></a></li>
+    <li><a class="button" href=""><span class="light">Základy programovania</span></a></li>
+    <li><a class="button" href="jednoduché programy.html"><span class="darken">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">Zaujímavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li><a href="jednoduché programy.html">Jednoduché programy</a></li>
+      <li><a href="zadanie01.html">Program 01</a></li>
+      <li><a href="zadanie02.html">Program 02</a></li>
+      <li><a href="zadanie03.html">Program 03</a></li>
+      <li><a href="zadanie04.html">Program 04</a></li>
+      <li><a href="zadanie05.html">Program 05</a></li>
+      <li><a href="zadanie06.html">Program 06</a></li>
+      <li><a href="zadanie07.html">Program 07</a></li>
+      <li><a href="zadanie08.html">Program 08</a></li>
+      <li><a href="zadanie09.html">Program 09</a></li>
+      <li><a href="zadanie10.html">Program 10</a></li>
+      <li><a href="zadanie11.html">Program 11</a></li>
+      <li><a href="zadanie12.html">Program 12</a></li>
+      <li><a href="zadanie13.html">Program 13</a></li>
+      <li><a href="zadanie14.html">Program 14</a></li>
+      <li><a href="zadanie15.html">Program 15</a></li>
+      <li><a href="zadanie16.html">Program 16</a></li>
+      <li><a href="zadanie17.html">Program 17</a></li>
+      <li><a href="zadanie18.html">Program 18</a></li>
+      <li><a href="zadanie19.html">Program 19</a></li>
+      <li><a href="zadanie20.html">Program 20</a></li>
+      <li><a href="zadanie21.html">Program 21</a></li>
+      <li><a href="zadanie22.html">Program 22</a></li>
+      <li><a href="zadanie23.html">Program 23</a></li>
+      <li><a href="zadanie24.html">Program 24</a></li>
+      <li><a href="zadanie25.html">Program 25</a></li>
+      <li><a href="zadanie26.html">Program 26</a></li>
+      <li><a href="zadanie27.html">Program 27</a></li>
+      <li class="left"><a href="zadanie28.html">Program 28</a></li>
+      <li><a href="zadanie29.html">Program 29</a></li>
+      <li><a href="zadanie30.html">Program 30</a></li>
+    </ul>
+  </div>
+
+  <div class="para1"><h3 class="right">Program 28</h3><h4 class="right">Pracovnı názov: Šifrovanie. </h4><p>
+Program bude šifruje text uloenı v textovom súbore, ktorı obsahuje len ve¾ké písmená bez diakritiky, bodky a medzery.<br><br>
+Úluhy:<br>
+a) Najskôr nech sa naèíta èíselnı k¾úè definujúci posun znakov v rozsahu 1 a 10.<br>
+b) Kadé písmeno zo vstupného súboru sa zašifruje pomocou zadaného k¾úèa tak, e znak sa nahradí znakom posunutım o danı poèet znakov vpravo (posledné ve¾ké písmená v abecede sa nahradia prvımi pod¾a ve¾kosti posunu).<br>
+c) Zašifrovanı text sa zapíše do nového textového súboru.
+<br><br>
+
+<strong>1.riešenie</strong><br><br>
+program zadanie28;<br>
+uses crt;<br>
+var subor,subor2:text;<br>
+&nbsp&nbsp  x,i,j:integer;<br>
+&nbsp&nbsp  c:char;<br>
+&nbsp&nbsp  pole: array[1..100] of integer;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  write('Zadaj kluc v rozsahu 1-10: ');<br>
+&nbsp&nbsp  readln(x);<br>
+&nbsp&nbsp  i:=0;<br>
+&nbsp&nbsp  Assign(subor,'E:\zadanie28.txt');<br>
+&nbsp&nbsp  reset(subor);<br>
+&nbsp&nbsp  while not Eof(subor) do begin<br>
+&nbsp&nbsp&nbsp&nbsp    i:=i+1;<br>
+&nbsp&nbsp&nbsp&nbsp    read(subor,c);<br>
+&nbsp&nbsp&nbsp&nbsp    if ord(c)>90-x then pole[i]:=ord(c)-26+x<br>
+&nbsp&nbsp&nbsp&nbsp    else pole[i]:=ord(c)+x;<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  Close(subor);<br>
+&nbsp&nbsp  for j:=1 to i do write(chr(pole[j]));<br>
+&nbsp&nbsp  Assign(subor2,'E:\zadanie282.txt');<br>
+&nbsp&nbsp  rewrite(subor2);<br>
+&nbsp&nbsp  j:=1;<br>
+&nbsp&nbsp  repeat<br>
+&nbsp&nbsp&nbsp&nbsp  read;<br>
+&nbsp&nbsp&nbsp&nbsp  write(subor2,chr(pole[j]));<br>
+&nbsp&nbsp&nbsp&nbsp  j:=j+1;<br>
+&nbsp&nbsp  until j=i+1;<br>
+&nbsp&nbsp  Close(subor2);<br>
+&nbsp&nbsp  repeat until keypressed;<br>
+end.<br><br>
+
+<strong>2.riešenie</strong><br><br>
+program zadanie28;<br>
+uses crt;<br>
+var a:char;<br>
+&nbsp&nbsp  x,z,y:integer;<br>
+&nbsp&nbsp  sub1,sub2:text;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  assign(sub1,'E:\zadanie28.txt');<br>
+&nbsp&nbsp  reset(sub1);<br>
+&nbsp&nbsp  assign(sub2,'E:\zadanie282.txt');<br>
+&nbsp&nbsp  rewrite(sub2);<br>
+&nbsp&nbsp  write('napis cislo od 1 do 10:');<br>
+&nbsp&nbsp  readln(x);<br>
+&nbsp&nbsp  while not EoF(sub1) do begin<br>
+&nbsp&nbsp&nbsp&nbsp    read(sub1,a);<br>
+&nbsp&nbsp&nbsp&nbsp    if a in[' ',':','.',','] then write(a)<br>
+&nbsp&nbsp&nbsp&nbsp    else begin z:=ord(a);<br>
+&nbsp&nbsp&nbsp&nbsp    y:=z+x;<br>
+&nbsp&nbsp&nbsp&nbsp    if z<91 then<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      if y<91 then write(chr(y))<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      else write(chr(y-26))<br>
+&nbsp&nbsp&nbsp&nbsp    else<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      if y<123 then write(chr(y))<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      else write(chr(y-26));<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  close(sub1);<br>
+&nbsp&nbsp  close(sub2);<br>
+&nbsp&nbsp  readln;<br>
+end.<br>
+
+  </p></div>
+</div>
+
+
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaèiatok stránky</strong></a></p>
+
+</body>

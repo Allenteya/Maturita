@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<title> Z·klady informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Vöetko, Ëo potrebujeö vedieù na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="TeÛria.html"><span class="light">TeÛria</span></a></li>
+    <li><a class="button" href=""><span class="light">Z·klady programovania</span></a></li>
+    <li><a class="button" href="jednoduchÈ programy.html"><span class="darken">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">ZaujÌmavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li><a href="jednoduchÈ programy.html">JednoduchÈ programy</a></li>
+      <li class="left"><a href="zadanie01.html">Program 01</a></li>
+      <li><a href="zadanie02.html">Program 02</a></li>
+      <li><a href="zadanie03.html">Program 03</a></li>
+      <li><a href="zadanie04.html">Program 04</a></li>
+      <li><a href="zadanie05.html">Program 05</a></li>
+      <li><a href="zadanie06.html">Program 06</a></li>
+      <li><a href="zadanie07.html">Program 07</a></li>
+      <li><a href="zadanie08.html">Program 08</a></li>
+      <li><a href="zadanie09.html">Program 09</a></li>
+      <li><a href="zadanie10.html">Program 10</a></li>
+      <li><a href="zadanie11.html">Program 11</a></li>
+      <li><a href="zadanie12.html">Program 12</a></li>
+      <li><a href="zadanie13.html">Program 13</a></li>
+      <li><a href="zadanie14.html">Program 14</a></li>
+      <li><a href="zadanie15.html">Program 15</a></li>
+      <li><a href="zadanie16.html">Program 16</a></li>
+      <li><a href="zadanie17.html">Program 17</a></li>
+      <li><a href="zadanie18.html">Program 18</a></li>
+      <li><a href="zadanie19.html">Program 19</a></li>
+      <li><a href="zadanie20.html">Program 20</a></li>
+      <li><a href="zadanie21.html">Program 21</a></li>
+      <li><a href="zadanie22.html">Program 22</a></li>
+      <li><a href="zadanie23.html">Program 23</a></li>
+      <li><a href="zadanie24.html">Program 24</a></li>
+      <li><a href="zadanie25.html">Program 25</a></li>
+      <li><a href="zadanie26.html">Program 26</a></li>
+      <li><a href="zadanie27.html">Program 27</a></li>
+      <li><a href="zadanie28.html">Program 28</a></li>
+      <li><a href="zadanie29.html">Program 29</a></li>
+      <li><a href="zadanie30.html">Program 30</a></li>
+    </ul>
+  </div>
+
+<div class="para1"><h3 class="right">Program 1</h3><h4 class="right">Pracovn˝ n·zov: Vytvorenie dedinky.</h4><p>
+&nbsp&nbsp&nbsp&nbsp Zostavte program, ktor˝ vykreslÌ na obrazovku dedinu podæa nasledovn˝ch podmienok:
+<ul>
+  <li>Vyplnen˝ ötvorec n·hodnej veækosti od 5 do 10 hviezdiËiek (spodn· Ëasù domu).</li>
+  <li>Vyplnen˝ rovnoramenn˝ trojuholnÌk so z·kladÚou o 2 hviezdiËky v‰Ëöou ako strana ötvorca (strecha domu).</li>
+  <li>Z grafick˝ch objektov  v bode 1 a 2  vytvorte domËek v n·hodnej polohe a n·hodnej farbe.</li>
+</ul>
+
+<strong>1. rieöenie</strong><br><br>
+program zadanie31;<br>
+uses crt,graph;<br>
+var x,z,y,i,j:integer;<br>
+&nbsp&nbsp  ovladac,grafmod:smallint;<br>
+procedure stvor(a:integer);<br>
+begin<br>
+&nbsp&nbsp  for i:=1 to a do begin<br>
+&nbsp&nbsp&nbsp&nbsp    write(' ');<br>
+&nbsp&nbsp&nbsp&nbsp    for j:=1 to x do write(' ');<br>
+&nbsp&nbsp&nbsp&nbsp    for j:=1 to a do write('*');<br>
+&nbsp&nbsp&nbsp&nbsp    writeln();<br>
+&nbsp&nbsp  end;<br>
+end;<br>
+procedure troj(a:integer);<br>
+var b,c,d:integer;<br>
+begin<br>
+&nbsp&nbsp  a:=a+2;<br>
+&nbsp&nbsp  if (a mod 2)=0 then begin d:=a div 2;<br>
+&nbsp&nbsp&nbsp&nbsp    c:=2;<br>
+&nbsp&nbsp  end<br>
+&nbsp&nbsp  else begin d:=a div 2+1;<br>
+&nbsp&nbsp&nbsp&nbsp    c:=1;<br>
+&nbsp&nbsp&nbsp&nbsp    end;                         <br>
+&nbsp&nbsp  b:=d -1;<br>
+&nbsp&nbsp  for i:=1 to d do begin<br>
+&nbsp&nbsp&nbsp&nbsp    for j:=1 to x do write(' ');<br>
+&nbsp&nbsp&nbsp&nbsp    for j:=1 to b do write(' ');<br>
+&nbsp&nbsp&nbsp&nbsp    for j:=1 to c do write('*');<br>
+&nbsp&nbsp&nbsp&nbsp    writeln();<br>
+&nbsp&nbsp&nbsp&nbsp    c:=c+2;<br>
+&nbsp&nbsp&nbsp&nbsp    b:=b-1;<br>
+&nbsp&nbsp  end;<br>
+end;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  randomize;<br>
+&nbsp&nbsp  z:=random(5)+5;<br>
+&nbsp&nbsp  x:=random(50);<br>
+&nbsp&nbsp  y:=random(20);<br>
+&nbsp&nbsp  gotoxy(1,y);<br>
+&nbsp&nbsp  textcolor(random(15));<br>
+&nbsp&nbsp  troj(z);<br>
+&nbsp&nbsp  stvor(z);<br>
+repeat until keypressed;<br>
+end.<br>
+&nbsp&nbsp  b:=d -1;<br>
+&nbsp&nbsp  for i:=1 to d do begin<br>
+&nbsp&nbsp&nbsp&nbsp    for j:=1 to x do write(' ');<br>
+&nbsp&nbsp&nbsp&nbsp    for j:=1 to b do write(' ');<br>
+&nbsp&nbsp&nbsp&nbsp    for j:=1 to c do write('*');<br>
+&nbsp&nbsp&nbsp&nbsp    writeln();<br>
+&nbsp&nbsp&nbsp&nbsp    c:=c+2;<br>
+&nbsp&nbsp&nbsp&nbsp    b:=b-1;<br>
+&nbsp&nbsp  end;<br>
+end;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  randomize;<br>
+&nbsp&nbsp  z:=random(5)+5;<br>
+&nbsp&nbsp  x:=random(50);<br>
+&nbsp&nbsp  y:=random(20);<br>
+&nbsp&nbsp  gotoxy(1,y);<br>
+&nbsp&nbsp  textcolor(random(15));<br>
+&nbsp&nbsp  troj(z);<br>
+&nbsp&nbsp  stvor(z);<br>
+repeat until keypressed;<br>
+end.<br><br>
+
+<strong>2.rieöenie</strong><br><br>
+program zadanie31;<br>
+uses crt;<br>
+var v,k:integer;<br>
+procedure domcek;<br>
+var a,b,c,d,i,j:integer;<br>
+&nbsp&nbsp  begin<br>
+&nbsp&nbsp&nbsp&nbsp    a:=random(5)+5;<br>
+&nbsp&nbsp&nbsp&nbsp    b:=random(5)+5;<br>
+&nbsp&nbsp&nbsp&nbsp    c:=random(69)+2;<br>
+&nbsp&nbsp&nbsp&nbsp    d:=random(10)+15;<br>
+&nbsp&nbsp&nbsp&nbsp    for i:=1 to a do begin<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      gotoxy(c,d);<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      for j:=1 to a do write('*');<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      d:=d-1;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      delay(20);<br>
+&nbsp&nbsp&nbsp&nbsp    end;<br>
+&nbsp&nbsp&nbsp&nbsp    a:=a+2;<br>
+&nbsp&nbsp&nbsp&nbsp    c:=c-1;<br>
+&nbsp&nbsp&nbsp&nbsp    repeat<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      gotoxy(c,d);<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      for j:=1 to a do write('*');<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      a:=a-2;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      d:=d-1;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      c:=c+1;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      delay(50);<br>
+&nbsp&nbsp&nbsp&nbsp    until a<1;<br>
+&nbsp&nbsp  end;<br>
+begin<br>
+&nbsp&nbsp  write('pocet domcekov: ');<br>
+&nbsp&nbsp  readln(k);<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  for v:=1 to k do begin<br>
+&nbsp&nbsp&nbsp&nbsp    textcolor(random(15)+1);<br>
+&nbsp&nbsp&nbsp&nbsp    domcek;<br>
+&nbsp&nbsp&nbsp&nbsp    delay(80);<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  delay(1000);<br>
+end.<br>
+
+
+
+  </p>
+</div>
+
+
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaËiatok str·nky</strong></a></p>
+
+</body>

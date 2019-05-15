@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<title> Z·klady informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Vöetko, Ëo potrebujeö vedieù na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="TeÛria.html"><span class="light">TeÛria</span></a></li>
+    <li><a class="button" href=""><span class="light">Z·klady programovania</span></a></li>
+    <li><a class="button" href="jednoduchÈ programy.html"><span class="darken">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">ZaujÌmavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li><a href="jednoduchÈ programy.html">JednoduchÈ programy</a></li>
+      <li><a href="zadanie01.html">Program 01</a></li>
+      <li><a href="zadanie02.html">Program 02</a></li>
+      <li><a href="zadanie03.html">Program 03</a></li>
+      <li><a href="zadanie04.html">Program 04</a></li>
+      <li><a href="zadanie05.html">Program 05</a></li>
+      <li><a href="zadanie06.html">Program 06</a></li>
+      <li><a href="zadanie07.html">Program 07</a></li>
+      <li><a href="zadanie08.html">Program 08</a></li>
+      <li><a href="zadanie09.html">Program 09</a></li>
+      <li><a href="zadanie10.html">Program 10</a></li>
+      <li><a href="zadanie11.html">Program 11</a></li>
+      <li><a href="zadanie12.html">Program 12</a></li>
+      <li><a href="zadanie13.html">Program 13</a></li>
+      <li><a href="zadanie14.html">Program 14</a></li>
+      <li><a href="zadanie15.html">Program 15</a></li>
+      <li><a href="zadanie16.html">Program 16</a></li>
+      <li><a href="zadanie17.html">Program 17</a></li>
+      <li class="left"><a href="zadanie18.html">Program 18</a></li>
+      <li><a href="zadanie19.html">Program 19</a></li>
+      <li><a href="zadanie20.html">Program 20</a></li>
+      <li><a href="zadanie21.html">Program 21</a></li>
+      <li><a href="zadanie22.html">Program 22</a></li>
+      <li><a href="zadanie23.html">Program 23</a></li>
+      <li><a href="zadanie24.html">Program 24</a></li>
+      <li><a href="zadanie25.html">Program 25</a></li>
+      <li><a href="zadanie26.html">Program 26</a></li>
+      <li><a href="zadanie27.html">Program 27</a></li>
+      <li><a href="zadanie28.html">Program 28</a></li>
+      <li><a href="zadanie29.html">Program 29</a></li>
+      <li><a href="zadanie30.html">Program 30</a></li>
+    </ul>
+  </div>
+
+
+   <div class="para1"><h3 class="right">Program 16</h3><h4 class="right">Pracovn˝ n·zov: Tovar v sklade.</h4><p>
+&nbsp&nbsp&nbsp&nbsp Program z textovÈho s˙boru ËÌta ˙daje o Ë.tovaru, poËte kusov a jednotkovej cene tovaru. <br><br>
+&nbsp&nbsp&nbsp&nbsp Program zistÌ poËet kusov vöetkÈho tovaru na sklade; celkov˙ hodnotu tovaru v sklade; poradovÈ ËÌsla tovarov ktor˝ch poËet je pod limitnou hodnotou.<br><br>
+PomÙcka: <br>
+&nbsp&nbsp&nbsp&nbsp⁄daje o kaûdom druhu tovaru s˙ zapÌsanÈ v jednom riadku textovÈho s˙boru oddelenÈ medzerami v nasledovnom poradÌ:
+ Ë. tovaru, poËet kusov a jednotkov· cena tovaru. 
+
+<br><br><strong>1. rieöenie</strong><br><br>
+program zadanie48;<br>
+uses crt;<br>
+var a,b,c,i,j,x,z,y,lim:integer;<br>
+&nbsp&nbsp  subor:text;<br>
+&nbsp&nbsp  pole:array[1..100] of integer;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  assign(subor,'E:\zadanie48.txt');<br>
+&nbsp&nbsp  reset(subor);<br>
+&nbsp&nbsp  write('zadaj limitnu hodnotu: ');<br>
+&nbsp&nbsp  readln(lim);<br>
+&nbsp&nbsp  z:=0;<br>
+&nbsp&nbsp  x:=0;<br>
+&nbsp&nbsp  y:=0;<br>
+&nbsp&nbsp  while not eof(subor) do begin<br>
+&nbsp&nbsp&nbsp&nbsp    while not Eoln(subor) do begin<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      read(subor,a,b,c);<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      z:=z+b;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      x:=x+b*c;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      if b<lim then begin pole[y]:=a;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        inc(y);<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      end;<br>
+&nbsp&nbsp&nbsp&nbsp    end;<br>
+&nbsp&nbsp&nbsp&nbsp    readln(subor);<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  close(subor);<br>
+&nbsp&nbsp  writeln('pocet vsetkych kusov: ',z);<br>
+&nbsp&nbsp  writeln('celkova hodnota: ',x);<br>
+&nbsp&nbsp  write('poradove cisla t. pod lim. hod.: ');<br>
+&nbsp&nbsp  for i:=1 to y do<br>
+&nbsp&nbsp&nbsp&nbsp    if pole[i-1]<10 then write('0',pole[i-1],' ')<br>
+&nbsp&nbsp&nbsp&nbsp    else write(pole[i-1],' ');<br>
+&nbsp&nbsp  repeat until keypressed;<br>
+end.<br><br>
+
+<strong>2.rieöenie</strong><br><br>
+
+program zadanie48;<br>
+uses crt;<br>
+var x,z,y,i,k,sum,cen:integer;<br>
+&nbsp&nbsp  sub:text;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  write('napis lim. hodnotu: ');<br>
+&nbsp&nbsp  readln(k);<br>
+&nbsp&nbsp  assign(sub,'E:\zadanie48.txt');<br>
+&nbsp&nbsp  reset(sub);<br>
+&nbsp&nbsp  sum:=0;<br>
+&nbsp&nbsp  cen:=0;<br>
+&nbsp&nbsp  write('pod lim. hodnotou: ');<br>
+&nbsp&nbsp  while not eof(sub) do begin<br>
+&nbsp&nbsp&nbsp&nbsp    readln(sub,x,y,z);<br>
+&nbsp&nbsp&nbsp&nbsp    sum:=sum+y;<br>
+&nbsp&nbsp&nbsp&nbsp    cen:=cen+y*z;<br>
+&nbsp&nbsp&nbsp&nbsp    if y<k then write(x,'. ');<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  close(sub);<br>
+&nbsp&nbsp  writeln;<br>
+&nbsp&nbsp  writeln('pocet kusov: ',sum);<br>
+&nbsp&nbsp  writeln('celkova cena: ',cen);<br>
+&nbsp&nbsp  readln;<br>
+end.<br>
+
+  </p>
+</div>
+
+
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaËiatok str·nky</strong></a></p>
+
+</body>

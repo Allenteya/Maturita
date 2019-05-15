@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<title> Základy informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Všetko, èo potrebuješ vedie na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="Teória.html"><span class="light">Teória</span></a></li>
+    <li><a class="button" href=""><span class="light">Základy programovania</span></a></li>
+    <li><a class="button" href="jednoduché programy.html"><span class="darken">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">Zaujímavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li><a href="jednoduché programy.html">Jednoduché programy</a></li>
+      <li><a href="zadanie01.html">Program 01</a></li>
+      <li><a href="zadanie02.html">Program 02</a></li>
+      <li><a href="zadanie03.html">Program 03</a></li>
+      <li><a href="zadanie04.html">Program 04</a></li>
+      <li><a href="zadanie05.html">Program 05</a></li>
+      <li><a href="zadanie06.html">Program 06</a></li>
+      <li><a href="zadanie07.html">Program 07</a></li>
+      <li><a href="zadanie08.html">Program 08</a></li>
+      <li><a href="zadanie09.html">Program 09</a></li>
+      <li><a href="zadanie10.html">Program 10</a></li>
+      <li><a href="zadanie11.html">Program 11</a></li>
+      <li><a href="zadanie12.html">Program 12</a></li>
+      <li><a href="zadanie13.html">Program 13</a></li>
+      <li><a href="zadanie14.html">Program 14</a></li>
+      <li><a href="zadanie15.html">Program 15</a></li>
+      <li><a href="zadanie16.html">Program 16</a></li>
+      <li><a href="zadanie17.html">Program 17</a></li>
+      <li><a href="zadanie18.html">Program 18</a></li>
+      <li><a href="zadanie19.html">Program 19</a></li>
+      <li><a href="zadanie20.html">Program 20</a></li>
+      <li class="left"><a href="zadanie21.html">Program 21</a></li>
+      <li><a href="zadanie22.html">Program 22</a></li>
+      <li><a href="zadanie23.html">Program 23</a></li>
+      <li><a href="zadanie24.html">Program 24</a></li>
+      <li><a href="zadanie25.html">Program 25</a></li>
+      <li><a href="zadanie26.html">Program 26</a></li>
+      <li><a href="zadanie27.html">Program 27</a></li>
+      <li><a href="zadanie28.html">Program 28</a></li>
+      <li><a href="zadanie29.html">Program 29</a></li>
+      <li><a href="zadanie30.html">Program 30</a></li>
+    </ul>
+  </div>
+
+  <div class="para1"><h3 class="right">Program 21</h3><h4 class="right">Pracovnı názov: Hádaj èíslo.</h4><p> 
+Poèítaè si vymyslí celé èíslo  zo zadaného intervalu,ale maximálne v rozsahu od 1 do 50. Hráè zadá èíslo, poèítaè vdy hráèovi napíše, èi je hádané èíslo väèšie alebo menšie. Hra konèí uhádnutím èísla.<br><br>
+
+Doplòujúce úlohy:<br>
+a)	Doplni program tak, e pouívate¾ zadá interval, z ktorého bude èíslo hádané.<br>
+b)	Vypíše poèet pokusov, ktorımi hráè uhádol hádané èíslo.<br>
+c)	Program si na konci vypıta meno hráèa, a zapíše do textového súboru meno hráèa a poèet  pokusov hádania.<br>
+d)	Ak poèet pokusov presiahne polovicu èísel zo zadaného intervalu , vypíše neúspešné hádanie a zobrazí hádané èíslo.<br><br>
+<strong>1. riešenie</strong><br><br>
+program zadanie21;<br>
+uses crt;<br>
+var x,z,a,b,c:integer;<br>
+&nbsp&nbsp  subor:text;<br>
+&nbsp&nbsp  meno:string;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  write('zadaj interval povolenych cisel: ');<br>
+&nbsp&nbsp  readln(a,b);<br>
+&nbsp&nbsp  c:=0;<br>
+&nbsp&nbsp  randomize;<br>
+&nbsp&nbsp  repeat<br>
+&nbsp&nbsp&nbsp&nbsp    x:=random(b+1);<br>
+&nbsp&nbsp  until x>=a;<br>
+&nbsp&nbsp  repeat<br>
+&nbsp&nbsp&nbsp&nbsp    write('napis svoj odhad: ');<br>
+&nbsp&nbsp&nbsp&nbsp    readln(z);<br>
+&nbsp&nbsp&nbsp&nbsp    c:=c+1;<br>
+&nbsp&nbsp&nbsp&nbsp    if z>x then writeln('cislo je mensie');<br>
+&nbsp&nbsp&nbsp&nbsp    if z<x then writeln('cislo je vacsie');<br>
+&nbsp&nbsp  until (z=x) or (c>((b-a+1)/2));<br>
+&nbsp&nbsp  if z=x then writeln('Gratulujem, uhadol si hladane cislo.');<br>
+&nbsp&nbsp  if c>((b-a+1)div 2) then<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp   writeln ('Neuspesne hadanie, hladane cislo:',x);<br>
+&nbsp&nbsp  writeln('Pocet pokusov: ',c);<br>
+&nbsp&nbsp  write('zadaj meno: ');<br>
+&nbsp&nbsp  readln(meno);<br>
+&nbsp&nbsp  Assign(subor,'E:\zadanie21.txt');<br>
+&nbsp&nbsp  append(subor);<br>
+&nbsp&nbsp  writeln(subor,meno,' ',c);<br>
+&nbsp&nbsp  close(subor);<br>
+&nbsp&nbsp  repeat until keypressed;<br>
+end.<br><br>
+<strong>2.riešenie</strong><br><br>
+program zadanie21;<br>
+uses crt;<br>
+var a,b,c,x,z:integer;<br>
+&nbsp&nbspy:string;<br>
+&nbsp&nbspsubor:text;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  write('interval cisel: ');<br>
+&nbsp&nbsp  readln(a,b);<br>
+&nbsp&nbsp  z:=0;<br>
+&nbsp&nbsp  randomize;<br>
+&nbsp&nbsp  x:=random(b-a)+a;<br>
+&nbsp&nbsp  repeat<br>
+&nbsp&nbsp&nbsp&nbsp    write('napis odhad: ');<br>
+&nbsp&nbsp&nbsp&nbsp    readln(c);<br>
+&nbsp&nbsp&nbsp&nbsp    inc(z);<br>
+&nbsp&nbsp&nbsp&nbsp    if c=x then writeln('uhadol si hladane cislo')<br>
+&nbsp&nbsp&nbsp&nbsp    else if (z=(b-a+2) div 2) then begin writeln('neuspesne hadanie');<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      writeln('hladanie cislo je: ',x);<br>
+&nbsp&nbsp&nbsp&nbsp    end<br>
+&nbsp&nbsp&nbsp&nbsp    else if c>x then writeln('hladane cislo je mensie')<br>
+&nbsp&nbsp&nbsp&nbsp    else writeln('hladane cislo je vacsie');<br>
+&nbsp&nbsp  until x=c;<br>
+&nbsp&nbsp  writeln('pocet pokusov: ',z);<br>
+&nbsp&nbsp  write('napis meno: ');<br>
+&nbsp&nbsp  readln(y);<br>
+&nbsp&nbsp  assign(subor,'E:\zadanie21.txt');<br>
+&nbsp&nbsp  append(subor);<br>
+&nbsp&nbsp  writeln(subor,y,z);<br>
+&nbsp&nbsp  close(subor);<br>
+&nbsp&nbsp  repeat until keypressed;<br>
+end.  <br>
+
+  </p></div>
+</div>
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaèiatok stránky</strong></a></p>
+
+</body>

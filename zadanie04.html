@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<title> Z·klady informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Vöetko, Ëo potrebujeö vedieù na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="TeÛria.html"><span class="light">TeÛria</span></a></li>
+    <li><a class="button" href=""><span class="light">Z·klady programovania</span></a></li>
+    <li><a class="button" href="jednoduchÈ programy.html"><span class="darken">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">ZaujÌmavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li><a href="jednoduchÈ programy.html">JednoduchÈ programy</a></li>
+      <li><a href="zadanie01.html">Program 01</a></li>
+      <li><a href="zadanie02.html">Program 02</a></li>
+      <li><a href="zadanie03.html">Program 03</a></li>
+      <li class="left"><a href="zadanie04.html">Program 04</a></li>
+      <li><a href="zadanie05.html">Program 05</a></li>
+      <li><a href="zadanie06.html">Program 06</a></li>
+      <li><a href="zadanie07.html">Program 07</a></li>
+      <li><a href="zadanie08.html">Program 08</a></li>
+      <li><a href="zadanie09.html">Program 09</a></li>
+      <li><a href="zadanie10.html">Program 10</a></li>
+      <li><a href="zadanie11.html">Program 11</a></li>
+      <li><a href="zadanie12.html">Program 12</a></li>
+      <li><a href="zadanie13.html">Program 13</a></li>
+      <li><a href="zadanie14.html">Program 14</a></li>
+      <li><a href="zadanie15.html">Program 15</a></li>
+      <li><a href="zadanie16.html">Program 16</a></li>
+      <li><a href="zadanie17.html">Program 17</a></li>
+      <li><a href="zadanie18.html">Program 18</a></li>
+      <li><a href="zadanie19.html">Program 19</a></li>
+      <li><a href="zadanie20.html">Program 20</a></li>
+      <li><a href="zadanie21.html">Program 21</a></li>
+      <li><a href="zadanie22.html">Program 22</a></li>
+      <li><a href="zadanie23.html">Program 23</a></li>
+      <li><a href="zadanie24.html">Program 24</a></li>
+      <li><a href="zadanie25.html">Program 25</a></li>
+      <li><a href="zadanie26.html">Program 26</a></li>
+      <li><a href="zadanie27.html">Program 27</a></li>
+      <li><a href="zadanie28.html">Program 28</a></li>
+      <li><a href="zadanie29.html">Program 29</a></li>
+      <li><a href="zadanie30.html">Program 30</a></li>
+    </ul>
+  </div>
+
+<div class="para1"><h3 class="right">Program 4</h3><h4 class="right">Pracovn˝ n·zov: Vymeök·ne hodiny.</h4><p>
+&nbsp&nbsp&nbsp&nbsp Vytvorte program, ktor˝:
+<ul>
+  <li>NaËÌta a vypÌöe obsah vstupnÈho s˙boru a uloûÌ ho do v˝stupnÈho s˙boru.</li>
+  <li>Do v˝stupnÈho s˙boru uloûÌ priemer ospravedlnen˝ch a neospravedlnen˝ch zameökan˝ch hodÌn v triede.</li>
+  <li>Do v˝stupnÈho s˙boru uloûÌ ûiaka s najv‰ËöÌm poËtom ospravedlnen˝ch hodÌn a ûiaka s najv‰ËöÌm poËtom neospravedlnen˝ch hodÌn.</li>
+</ul>
+<p> Moûn˝ obsah textovÈho s˙boru: <br> 
+&nbsp&nbsp&nbsp&nbsp 7
+&nbsp&nbsp&nbsp&nbsp 1  Jozef Ignac         32 2 <br> 
+&nbsp&nbsp&nbsp&nbsp 2  Ladisla Bagin       0  0 <br> 
+&nbsp&nbsp&nbsp&nbsp 3  Anna Baginova       16 0 <br> 
+&nbsp&nbsp&nbsp&nbsp 4  Jan Trnka           2  0 <br> 
+&nbsp&nbsp&nbsp&nbsp 5  Peter Lacko         6  0 <br> 
+&nbsp&nbsp&nbsp&nbsp 6  Jana Hudcova        3  2 <br> 
+&nbsp&nbsp&nbsp&nbsp 7  Michal Nebral       0  2 <br> 
+
+<br><br><strong>1. rieöenie</strong><br><br>
+
+program zadanie34;<br>
+uses crt;<br>
+var a,b,x,z,y,i,j,g:integer;<br>
+&nbsp&nbsp  c:char;<br>
+&nbsp&nbsp  meno,e,f:string;<br>
+&nbsp&nbsp  sub1,sub2:text;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  assign(sub1,'E:\zadanie34.txt');<br>
+&nbsp&nbsp  reset(sub1);<br>
+&nbsp&nbsp  assign(sub2,'E:\zadanie342.txt');<br>
+&nbsp&nbsp  rewrite(sub2);<br>
+&nbsp&nbsp  i:=0;<br>
+&nbsp&nbsp  j:=0;<br>
+&nbsp&nbsp  y:=0;<br>
+&nbsp&nbsp  z:=0;<br>
+&nbsp&nbsp  while not Eof(sub1) do begin<br>
+&nbsp&nbsp&nbsp&nbsp    while not EoLn(sub1) do begin<br>
+&nbsp&nbsp&nbsp&nbsp    meno:='';<br>
+&nbsp&nbsp&nbsp&nbsp    read(sub1,x);<br>
+&nbsp&nbsp&nbsp&nbsp    write(sub2,x);<br>
+&nbsp&nbsp&nbsp&nbsp    g:=0;<br>
+&nbsp&nbsp&nbsp&nbsp    repeat<br>
+&nbsp&nbsp&nbsp&nbsp    read(sub1,c);<br>
+&nbsp&nbsp&nbsp&nbsp    meno:=meno+c;<br>
+&nbsp&nbsp&nbsp&nbsp    if c=' ' then inc(g);<br>
+&nbsp&nbsp&nbsp&nbsp    until g>3;<br>
+&nbsp&nbsp&nbsp&nbsp    readln(sub1,a,b);<br>
+&nbsp&nbsp&nbsp&nbsp    writeln(sub2,meno,' ',' ',a,' ',b);<br>
+&nbsp&nbsp&nbsp&nbsp    writeln(x,meno,'  ',a,' ',b);<br>
+&nbsp&nbsp&nbsp&nbsp    i:=i+a;<br>
+&nbsp&nbsp&nbsp&nbsp    j:=j+b;<br>
+&nbsp&nbsp&nbsp&nbsp    if y<a then begin y:=a;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      e:=meno;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      end;<br>
+&nbsp&nbsp&nbsp&nbsp    if (z<b) or (z=b) then begin z:=b;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      f:=meno+' '+f;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      end;<br>
+&nbsp&nbsp&nbsp&nbsp    end;<br>
+&nbsp&nbsp&nbsp&nbsp    end;<br>
+&nbsp&nbsp  writeln(sub2,'priemer ospravedlnenych hodin:' ,i/7:0:2);<br>
+&nbsp&nbsp  writeln(sub2,'priemer neospravedlnenych hodin:' ,j/7:0:2);<br>
+&nbsp&nbsp  writeln(sub2,'ziak s najviac osp. hodinami: ',e,' ',y);<br>
+&nbsp&nbsp  writeln(sub2,'ziak s najviac neosp. hodinami: ',f,' ',z);<br>
+&nbsp&nbsp  writeln('priemer ospravedlnenych hodin:' ,i/7:0:2);<br>
+&nbsp&nbsp  writeln('priemer neospravedlnenych hodin:' ,j/7:0:2);<br>
+&nbsp&nbsp  writeln('ziak s najviac osp. hodinami: ',e,' ',y);<br>
+&nbsp&nbsp  writeln('ziak s najviac neosp. hodinami: ',f,' ',z);<br>
+&nbsp&nbsp  readln;<br>
+&nbsp&nbsp  close(sub2);<br>
+end.<br><br>
+
+<strong>2.rieöenie</strong><br><br>
+program zadanie34;<br>
+uses crt;<br>
+var sub1,sub2:text;<br>
+&nbsp&nbsp  x,z,y,i,j,po1,po2,max,min:integer;<br>
+&nbsp&nbsp  b,c,d,a,e:string;<br>
+&nbsp&nbsp  pr1,pr2:real;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  assign(sub1,'E:\zadanie34.txt');<br>
+&nbsp&nbsp  reset(sub1);<br>
+&nbsp&nbsp  assign(sub2,'E:\zadanie342.txt');<br>
+&nbsp&nbsp  rewrite(sub2);<br>
+&nbsp&nbsp  po1:=0;<br>
+&nbsp&nbsp  po2:=0;<br>
+&nbsp&nbsp  max:=0;<br>
+&nbsp&nbsp  min:=100;<br>
+&nbsp&nbsp  while not Eof(sub1) do begin<br>
+&nbsp&nbsp&nbsp&nbsp    readln(sub1,i,c);<br>
+&nbsp&nbsp&nbsp&nbsp    b:='';<br>
+&nbsp&nbsp&nbsp&nbsp    j:=length(c);<br>
+&nbsp&nbsp&nbsp&nbsp    a:=c[j];<br>
+&nbsp&nbsp&nbsp&nbsp    repeat<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      b:=c[j-2]+b;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      j:=j-1;<br>
+&nbsp&nbsp&nbsp&nbsp    until c[j-2]=' ';<br>
+&nbsp&nbsp&nbsp&nbsp    val(a,x);<br>
+&nbsp&nbsp&nbsp&nbsp    val(b,y);<br>
+&nbsp&nbsp&nbsp&nbsp    if max<y then begin max:=x;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      d:=c;<br>
+&nbsp&nbsp&nbsp&nbsp    end;<br>
+&nbsp&nbsp&nbsp&nbsp    if min>x then begin min:=y;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      e:=c<br>
+&nbsp&nbsp&nbsp&nbsp    end;<br>
+&nbsp&nbsp&nbsp&nbsp    po1:=po1+x;<br>
+&nbsp&nbsp&nbsp&nbsp    po2:=po2+y;<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  close(sub1);<br>
+&nbsp&nbsp  writeln(sub2,'priemer os hodin: ',po2/7:0:2);<br>
+&nbsp&nbsp  writeln(sub2,'priemer neos hodin: ',po1/7:0:2);<br>
+&nbsp&nbsp  writeln(sub2,'ziak s max os h: ',d);<br>
+&nbsp&nbsp  writeln(sub2,'ziak s min neos h: ',e);<br>
+&nbsp&nbsp  close(sub2);<br>
+&nbsp&nbsp  writeln('priemer os hodin: ',po2/7:0:2);<br>
+&nbsp&nbsp  writeln('priemer neos hodin: ',po1/7:0:2);<br>
+&nbsp&nbsp  writeln('ziak s max os h: ',d);<br>
+&nbsp&nbsp  writeln('ziak s min neos h: ',e);<br>
+&nbsp&nbsp  readln;<br>
+end.<br>
+
+
+  </p>
+</div>
+
+
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaËiatok str·nky</strong></a></p>
+
+</body>

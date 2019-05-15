@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<title> Základy informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Všetko, èo potrebuješ vedie na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="Teória.html"><span class="darken">Teória</span></a></li>
+    <li><a class="button" href=""><span class="light">Základy programovania</span></a></li>
+    <li><a class="button" href="jednoduché programy.html"><span class="light">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">Zaujímavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li class="left"><a href="03_Grafická informácia.html">3.Grafická informácia</a></li>
+      <li><a href="04_zvukova informacia.html"><strong>4.Zvúkova informácia</strong></a></li>
+      <li><a href="06_Kybernetická bezpeènos.html"><strong>6.Kybernetická bezpeènos</strong></a></li>
+      <li><a href="07_èíselné sústavy.html"><strong>7.èíselné sústavy</strong></a></li>
+      <li><a href="08_Webové prehliadaèe.html"><strong>8.Webové prehliadaèe</strong></a></li>
+      <li><a href="10_Základné pojmy poèítaèovıch systémov.html"><strong>10.Základné pojmy poèítaèovıch systémov</strong></a></li>
+      <li><a href="11_Operaènı systém.html"><strong>11.Operaènı systém</strong></a></li>
+      <li><a href="14_Poèítaèová sie.html"><strong>14.Poèítaèová sie</strong></a></li>
+      <li><a href="16_ Von Neuman.html"><strong>16.Von Neuman</strong></a></li>
+      <li><a href="20_difitalizacia dokumentu.html"><strong>20.Difitalizácia dokumentu</strong></a></li> 
+    </ul>
+  </div>
+<div class="para1"><h3 class="right">3. Grafická infromácia</h3>
+<h4 class="right">Grafická informácia</h4><p>
+
+Ako získame grafické informácie?   - PC, skener, fotoaparát...<br>
+&nbsp&nbsp&nbsp&nbsp Èo je to rastrová grafika (jej vıhody a pouitie)? -  bod, nenároèné, problémy pri zmene ve¾kosti<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp V súèasnosti najpouívanejší druh grafiky a pre beného uívate¾a aj najdostupnejší spôsob zachytenia obrazu v poèítaèi. Niekedy je pomenovaná ako bitmapová grafika. Typickım príkladom tejto grafiky ja napríklad fotografia.<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Základnı zobrazovací prvok je bod (pixel).<br><br>
+
+&nbsp&nbsp&nbsp&nbspRastrovı obraz sa skladá z mnostva obrazovıch bodov – pixelov, uloenıch v pevnıch riadkoch a ståpcoch.<br>
+Pre kadı pixel (štvorèek) je nutné okrem polohy (riadok a ståpec) zakódova aj farbu, resp. ïalšie parametre napr. prieh¾adnos.<br>
+Rozmer kadého obrázka je pre poèítaè poèet pixelov na šírku krát poèet pixelov na vıšku, èomu hovoríme rozlíšenie tzv. DPI (DPI = Dot Per Inch, poèet bodov na palec je poèet bodov na jednotku vzdialenosti, pre predstavu 1 palec je pribline 2,54 cm).<br>
+Kvalita obrazu je daná poètom prvkov obrazu èie jeho rozlíšením a poètom základnıch farieb. Èím viac bodov, tım lepší obrázok, ale aj väèší súbor pre uloenie na disk.<br><br>
+
+&nbsp&nbsp&nbsp&nbspVıhody rastrovej grafiky:<br><br>
+Sú špeciálne urèené pre ukladanie predlôh z reálneho sveta (skenované obrázky, digitálne fotografie).<br>
+Rastrové hodnoty môu by modifikované individuálne alebo po väèších mnostvách, napríklad: nie je problém v obrázku naraz vymeni jednu farbu za inú.<br>
+Môu by ¾ahko prenášané na rastrové vıstupné zariadenia. Monitory i väèšina tlaèiarní pracuje na rastrovom princípe.<br>
+&nbsp <br>
+Nevıhody rastrovej grafiky:<br>
+Sú väèšinou ve¾mi rozsiahle a to predovšetkım vtedy, keï je v predlohe ve¾a farieb.<br>
+Transformáciami dochádza k ványm zmenám v kvalite, napr. zmenšením miznú tenké èiary, pri vıraznom zväèšení môeme dosta buïto rozmazané obrázky, alebo „zubaté“ okraje a èiary. <br><br>
+
+&nbsp&nbsp&nbsp&nbsp Aké sú parametre charakterizujúce grafickı súbor v rastrovej grafike?  <br>
+pixely- poèet na šírku x poèet na vıšku, zakódovanie farby, prieh¾adnos<br><br>
+
+&nbsp&nbsp&nbsp&nbsp Vypoèítajte ko¾ko pamäte zaberie obrázok o rozmeroch 640x480 obrazovıch bodov s farebnou håbkou True Color.<br>
+640x480= 307 200*24/8= 921 600B /1024= 900 KB<br><br>
+
+&nbsp&nbsp&nbsp&nbspÈo je to vektorová grafika (jej vıhody a pouitie)? krivka, geometrické útvary, zmena ve¾kosti bez poškodenia...<br>
+&nbsp&nbsp&nbsp&nbspVektorová grafika sa skladá z objektov a geometrickıch útvarov. Vektorová grafika sa pouíva pre znázornenie rôznych geometrickıch konštrukcií, ale aj pri vytváraní kresleného designu.<br>
+Základnı zobrazovací prvok je vektor.<br>
+Sú to obrázky, ktoré sa dajú vyjadri mnoinou kriviek, ktoré sú urèené dvomi vektormi. Najèastejšie sa skladajú z kriviek a úseèiek.<br>
+Obrázky vo vektorovej grafike sú tvorené pomocou základnıch objektov a ich vlastností (polohou na obrázku, ve¾kosou, farbou, prieh¾adnosou povrchu, lesklosou povrchu a pod).<br>
+Zobrazené objekty sú urèené svojim okrajom pomocou krivky ktorá je vypoèítaná zo vzorca.<br>
+Kvalita obrazu je daná poètom adresovate¾nıch bodov a maximálnou dåkou èiar.<br><br>
+
+&nbsp&nbsp&nbsp&nbsp Vıhody vektorovej grafiky:<br>
+&nbsp&nbsp&nbsp&nbsp •Je moné ¾ubovo¾ne zmenšova alebo zväèšova obrázok bez straty kvality.<br>
+&nbsp&nbsp&nbsp&nbsp •Je moné pracova s kadım objektom v obrázku oddelene.<br>
+&nbsp&nbsp&nbsp&nbsp •Vısledná pamäová nároènos obrázka je obvykle omnoho menšia ako pri rastrovej grafike.<br>
+&nbsp <br>
+&nbsp&nbsp&nbsp&nbspNevıhody vektorovej grafiky:<br>
+&nbsp&nbsp&nbsp&nbsp•Oproti rastrovej grafike spravidla zloitejšie vytvorenie obrázka; v rastrovej grafike mono obrázok ¾ahko získa pomocou fotografie.<br>
+&nbsp&nbsp&nbsp&nbsp•Ak prekroèí zloitos grafického objektu urèitú hranicu, zaène by vektorová grafika nároènejšia na pamä, procesor, ve¾kos disku ako grafika bitmapová.<br><br>
+
+&nbsp&nbsp&nbsp&nbspÈo rozumieme pod pojmom kódovanie farieb?  CMYK, RGB model monitory, internety = RGB, tlaèiarne = CMYK<br>
+Farebnı model RGB je najèastejšie vyuívané kódovanie farby bodu obrázka. Pouiva  a 256 odtieòov kadej farby (8 bitov), èo nám umoní vytvori a 16 777 216 rôznych farieb. Pri takomto kódovaní je kadá farba zakódovaná 24 bitmi, èo sú tri pamäové miesta poèítaèa. Prièom 255 0 0 je sıta èervená farba, 0 255 0 je sıta zelená farba, 0 0 255 je sıta modrá farba, 0 0 0 je èierna farba a 255 255 255 je biela farba.<br><br>
+Farebnı model CMY je model, ktorı pouíva doplnkové farby. V modeli RGB platilo, e ak zmiešame všetky tri základné farby s maximálnou sıtosou, dostaneme bielu farbu. Takıto spôsob je vıhodnı pri obrazovkách monitorov, pretoe tienidlo je èierne. Pri tlaèiaròach sa však tlaèí na biely papier, preto potrebujeme vzia také farby, pri ktorıch, ak zmiešame ich najsıtejšie odtiene, dostaneme èiernu farbu. Takéto farby dostaneme, keï zoberieme doplnkové farby k farbám èervená, zelená a modrá. Tımito farbami sú azúrová (Cyan), purpurová (Magenta) a ltá (Yellow). Kvôli tomu, e je lacnejšie vyrobi èierny atrament ako ho mieša pomocou tıchto troch farieb, sa k tımto farbám pridáva i samostatná èierna farba a tento model sa oznaèuje tie CMYK, kde posledné písmeno je odvodené od blacK - èierna . Vıhodou tohto formátu je tá, e vısledná farba CMY sa dá ve¾mi jednoducho získa z modelu RGB pomocou vzorcov: C = (255 - R); M = (255 - G); Y = (255 -B)<br>
+
+
+
+
+  </p>
+</div>
+
+
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaèiatok stránky</strong></a></p>
+
+</body>

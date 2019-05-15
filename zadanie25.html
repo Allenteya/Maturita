@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<title> Z·klady informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Vöetko, Ëo potrebujeö vedieù na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="TeÛria.html"><span class="light">TeÛria</span></a></li>
+    <li><a class="button" href=""><span class="light">Z·klady programovania</span></a></li>
+    <li><a class="button" href="jednoduchÈ programy.html"><span class="darken">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">ZaujÌmavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li><a href="jednoduchÈ programy.html">JednoduchÈ programy</a></li>
+      <li><a href="zadanie01.html">Program 01</a></li>
+      <li><a href="zadanie02.html">Program 02</a></li>
+      <li><a href="zadanie03.html">Program 03</a></li>
+      <li><a href="zadanie04.html">Program 04</a></li>
+      <li><a href="zadanie05.html">Program 05</a></li>
+      <li><a href="zadanie06.html">Program 06</a></li>
+      <li><a href="zadanie07.html">Program 07</a></li>
+      <li><a href="zadanie08.html">Program 08</a></li>
+      <li><a href="zadanie09.html">Program 09</a></li>
+      <li><a href="zadanie10.html">Program 10</a></li>
+      <li><a href="zadanie11.html">Program 11</a></li>
+      <li><a href="zadanie12.html">Program 12</a></li>
+      <li><a href="zadanie13.html">Program 13</a></li>
+      <li><a href="zadanie14.html">Program 14</a></li>
+      <li><a href="zadanie15.html">Program 15</a></li>
+      <li><a href="zadanie16.html">Program 16</a></li>
+      <li><a href="zadanie17.html">Program 17</a></li>
+      <li><a href="zadanie18.html">Program 18</a></li>
+      <li><a href="zadanie19.html">Program 19</a></li>
+      <li><a href="zadanie20.html">Program 20</a></li>
+      <li><a href="zadanie21.html">Program 21</a></li>
+      <li><a href="zadanie22.html">Program 22</a></li>
+      <li><a href="zadanie23.html">Program 23</a></li>
+      <li><a href="zadanie24.html">Program 24</a></li>
+      <li class="left"><a href="zadanie25.html">Program 25</a></li>
+      <li><a href="zadanie26.html">Program 26</a></li>
+      <li><a href="zadanie27.html">Program 27</a></li>
+      <li><a href="zadanie28.html">Program 28</a></li>
+      <li><a href="zadanie29.html">Program 29</a></li>
+      <li><a href="zadanie30.html">Program 30</a></li>
+    </ul>
+  </div>
+  
+  <div class="para1"><h3 class="right">Program 25</h3><h4 class="right">Pracovn˝ n·zov: Papier, kameÚ, noûnice.</h4><p>
+Vytvoren˝ program bude simulovaù hru ÑkameÚ, papier, noûniceì. Hru bude hraù jeden hr·Ë proti poËÌtaËu. Hr·Ë volÌ symbol pre kameÚ, papier, noûnice . PoËÌtaË vygeneruje svoj symbol n·hodne.<br><br>
+DoplÚuj˙ce ˙lohy:<br>
+a)	Zobrazenie tip hr·Ëa a tip poËÌtaËa.<br>
+b)	UrËenie vÌùaza v kaûdej hre.<br>
+c)	PoËet opakovanÌ hry sa zad· z kl·vesnice.<br>
+d)	UrËiù vÌùaza celej hry.<br><br>
+
+<strong>1.rieöenie</strong><br><br>
+program zadanie25;<br>
+uses crt;<br>
+var x,z,y,e,f:integer;<br>
+&nbsp&nbsp  a,b:string;<br>
+&nbsp&nbsp  function pr(q:integer):string;<br>
+&nbsp&nbsp&nbsp&nbsp  begin<br>
+&nbsp&nbsp&nbsp&nbsp   case q of
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  0: pr:='kamen';<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  1: pr:='papier';<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  2: pr:='noznice';<br>
+&nbsp&nbsp&nbsp&nbsp  end;<br>
+&nbsp&nbsp&nbsp&nbsp  end;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  writeln('Hra kamen-K, papier-P, noznice-N');<br>
+&nbsp&nbsp  Write('Napis pocet hier: ');<br>
+&nbsp&nbsp  readln(y);<br>
+&nbsp&nbsp  e:=0;<br>
+&nbsp&nbsp  f:=0;<br>
+&nbsp&nbsp  repeat<br>
+&nbsp&nbsp&nbsp&nbsp  y:=y-1;<br>
+&nbsp&nbsp&nbsp&nbsp  writeln;<br>
+&nbsp&nbsp&nbsp&nbsp  write('zadaj svoj tip:');<br>
+&nbsp&nbsp&nbsp&nbsp  readln(a);<br>
+&nbsp&nbsp&nbsp&nbsp  randomize;<br>
+&nbsp&nbsp&nbsp&nbsp  x:=random(2);<br>
+&nbsp&nbsp&nbsp&nbsp  case a of<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  'K': z:=0;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  'P': z:=1;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  'N': z:=2;<br>
+&nbsp&nbsp&nbsp&nbsp  end;<br>
+&nbsp&nbsp&nbsp&nbsp  writeln('Tvoj tip:',pr(z),'  Tip PC:',pr(x));<br>
+&nbsp&nbsp&nbsp&nbsp  if z=x then writeln('Je to remiza.')<br>
+ &nbsp&nbsp&nbsp&nbsp else if ((z=0) and (x=2)) or ((z=1) and (x=0)) or ((z=2) and (x=1)) then begin<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      writeln('Gratulujem. Vyhral si.');<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       e:=e+1;<br>
+&nbsp&nbsp&nbsp&nbsp      end<br>
+&nbsp&nbsp&nbsp&nbsp  else begin writeln ('Vyhral pocitac.');<br>
+&nbsp&nbsp&nbsp&nbsp       f:=f+1;<br>
+&nbsp&nbsp       end;<br>
+&nbsp&nbsp  until y=0;<br>
+&nbsp&nbsp  writeln;<br>
+&nbsp&nbsp  if e>f then writeln('Celkovy vitaz je hrac s poctom bodov ',e,'.')<br>
+&nbsp&nbsp  else if e<f then writeln('Celkovy vitaz je PC.')<br>
+&nbsp&nbsp  else writeln('Celkovy vitaz nie je.');<br>
+&nbsp&nbsp writeln('Koniec.');<br>
+&nbsp&nbsp  readln;<br>
+end.<br><br>
+<strong>2.rieöenie</strong><br><br>
+program zadanie25;<br>
+uses crt;<br>
+var x,z,y,i,j,k:integer;<br>
+function vyber(w:integer):string;<br>
+&nbsp&nbsp  begin<br>
+&nbsp&nbsp&nbsp&nbsp    case w of<br>
+&nbsp&nbsp&nbsp&nbsp    0: vyber:='kamen';<br>
+&nbsp&nbsp&nbsp&nbsp    1: vyber:='papier';<br>
+&nbsp&nbsp&nbsp&nbsp    2: vyber:='noznice';<br>
+&nbsp&nbsp&nbsp&nbsp    end;<br>
+&nbsp&nbsp  end;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  write('zadaj pocet hier: ');<br>
+&nbsp&nbsp  readln(z);<br>
+&nbsp&nbsp  i:=0;<br>
+&nbsp&nbsp  j:=0;<br>
+&nbsp&nbsp  for k:=1 to z do begin<br>
+&nbsp&nbsp  write('zadaj kamen-0, papier-1, noznice-2 :');<br>
+&nbsp&nbsp  readln(x);<br>
+&nbsp&nbsp  randomize;<br>
+&nbsp&nbsp  y:=random(2);<br>
+&nbsp&nbsp  writeln('hrac si vybral: ',vyber(x));<br>
+&nbsp&nbsp  writeln('pc si vzbral: ',vyber(y));<br>
+&nbsp&nbsp  if (x=y) then writeln('je to remiza')<br>
+&nbsp&nbsp  else if ((x=0) and (y=2)) or ((x=1) and (y=0)) or ((x=2) and (y=2)) then begin<br>
+&nbsp&nbsp&nbsp&nbsp    writeln('vyhral hrac');<br>
+&nbsp&nbsp&nbsp&nbsp    inc(i);<br>
+&nbsp&nbsp  end<br>
+&nbsp&nbsp  else begin writeln('vyhral pocitac');<br>
+&nbsp&nbsp&nbsp&nbsp    inc(j);<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  if i&gtj then writeln('celkovo vyhral hrac, pocet bodov: ',i);<br>
+&nbsp&nbsp  else if j&lti then writeln('celkovo vyhral PC, pocet bodov: ',j);<br>
+&nbsp&nbsp  else writeln('hra skoncila remizou, pocet bodov kazdeho: ',i);<br>
+&nbsp&nbsp  readln;<br>
+end.  <br>
+
+
+  </p></div>
+</div>
+
+
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaËiatok str·nky</strong></a></p>
+
+</body>

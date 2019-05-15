@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<title> Z·klady informatiky </title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<h1><a name="Informatika"> Informatika</a><h1><img class="image" src="index.jpg">
+<h2> Vöetko, Ëo potrebujeö vedieù na maturitu. </h2>
+
+<div id="nav">
+  <ul>
+    <li><a class="button" href="index.html"><span class="light">Domov</span></a></li>
+    <li><a class="button" href="TeÛria.html"><span class="light">TeÛria</span></a></li>
+    <li><a class="button" href=""><span class="light">Z·klady programovania</span></a></li>
+    <li><a class="button" href="jednoduchÈ programy.html"><span class="darken">Programy</span></a></li>
+    <li><a class="button" href=""><span class="light">ZaujÌmavosti</span></a></li>
+  </ul>
+</div> <br><br>
+
+<div ckass="section">
+  <div id="des">
+    <ul>
+      <li><a href="jednoduchÈ programy.html">JednoduchÈ programy</a></li>
+      <li><a href="zadanie01.html">Program 01</a></li>
+      <li><a href="zadanie02.html">Program 02</a></li>
+      <li><a href="zadanie03.html">Program 03</a></li>
+      <li><a href="zadanie04.html">Program 04</a></li>
+      <li><a href="zadanie05.html">Program 05</a></li>
+      <li><a href="zadanie06.html">Program 06</a></li>
+      <li><a href="zadanie07.html">Program 07</a></li>
+      <li><a href="zadanie08.html">Program 08</a></li>
+      <li><a href="zadanie09.html">Program 09</a></li>
+      <li><a href="zadanie10.html">Program 10</a></li>
+      <li><a href="zadanie11.html">Program 11</a></li>
+      <li><a href="zadanie12.html">Program 12</a></li>
+      <li><a href="zadanie13.html">Program 13</a></li>
+      <li><a href="zadanie14.html">Program 14</a></li>
+      <li><a href="zadanie15.html">Program 15</a></li>
+      <li><a href="zadanie16.html">Program 16</a></li>
+      <li><a href="zadanie17.html">Program 17</a></li>
+      <li><a href="zadanie18.html">Program 18</a></li>
+      <li><a href="zadanie19.html">Program 19</a></li>
+      <li><a href="zadanie20.html">Program 20</a></li>
+      <li><a href="zadanie21.html">Program 21</a></li>
+      <li><a href="zadanie22.html">Program 22</a></li>
+      <li><a href="zadanie23.html">Program 23</a></li>
+      <li><a href="zadanie24.html">Program 24</a></li>
+      <li><a href="zadanie25.html">Program 25</a></li>
+      <li><a href="zadanie26.html">Program 26</a></li>
+      <li><a href="zadanie27.html">Program 27</a></li>
+      <li><a href="zadanie28.html">Program 28</a></li>
+      <li class="left"><a href="zadanie29.html">Program 29</a></li>
+      <li><a href="zadanie30.html">Program 30</a></li>
+    </ul>
+  </div>
+
+  <div class="para1"><h3 class="right">Program 29</h3><h4 class="right">Pracovn˝ n·zov: Rozsviecovanie. </h4><p>
+Program bude n·hodn˝m generovanÌm polohy na monitore postupne vypÂÚaù plochu obrazovky Ñrozsvieten˝miì obdÂûnikmi (ASCII znak s poradov˝m ËÌslom 219).<br><br>
+Rozsvecovanie sa ukonËÌ buÔ po stlaËenÌ æubovoænej kl·vesy alebo po dosiahnutÌ poËtu okien 300.<br><br>
+Taktieû program bude maù moûnosù zapam‰taù si vysvieten˙ obrazovku a jej op‰tovnÈho zobrazenia aj po ukonËenÌ programu.
+<br><br>
+
+<strong>1.rieöenie</strong><br><br>
+program zadanie29;<br>
+uses crt,graph;<br>
+var x,z,y,i:integer;<br>
+&nbsp&nbsp  ovladac,grafmod:smallint;<br>
+&nbsp&nbsp  a:char;<br>
+&nbsp&nbsp  pole1:array[1..300] of integer;<br>
+&nbsp&nbsp  pole2:array[1..300] of integer;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  begin<br>
+&nbsp&nbsp  ovladac:=Detect;<br>
+&nbsp&nbsp  Initgraph(ovladac,grafmod,'C:\lazarus');<br>
+&nbsp&nbsp  randomize;<br>
+&nbsp&nbsp  z:=1;<br>
+&nbsp&nbsp  setColor(yellow);<br>
+&nbsp&nbsp  repeat<br>
+&nbsp&nbsp&nbsp   x:=random(getmaxX+1);<br>
+&nbsp&nbsp&nbsp   pole1[z]:=x;<br>
+&nbsp&nbsp&nbsp   y:=random(getmaxY+1);<br>
+&nbsp&nbsp&nbsp   pole2[z]:=y;<br>
+&nbsp&nbsp&nbsp   OuttextXY(X,Y,chr(219));<br>
+&nbsp&nbsp&nbsp   Inc(z);<br>
+&nbsp&nbsp&nbsp   delay(10);<br>
+&nbsp&nbsp  until (z=301) or keypressed;<br>
+&nbsp&nbsp  CloseGraph;<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  repeat<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        write('chces opatovne vysvietit obrazovku? A/N:');<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        readln(a);<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        if a='A' then begin<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp           ovladac:=Detect;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp           Initgraph(ovladac,grafmod,'E:\Pascal');<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp           for i:=1 to 301 do begin setColor(yellow);<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp               OutTextXY(pole1[i],pole2[i],chr(219));<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp               delay(10);<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            end;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        end;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        CloseGraph;<br>
+&nbsp&nbsp  until a='N';<br>
+end.<br><br>
+
+<strong>2.rieöenie</strong><br><br>
+program zadanie29;<br>
+uses crt;<br>
+var x,z,y,j:integer;<br>
+&nbsp&nbsp  a:char;<br>
+&nbsp&nbsp  pole1,pole2:array[1..300]of integer;<br>
+begin<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  textcolor(14);<br>
+&nbsp&nbsp  z:=0;<br>
+&nbsp&nbsp  repeat<br>
+&nbsp&nbsp&nbsp&nbsp    x:=random(80);<br>
+&nbsp&nbsp&nbsp&nbsp    y:=random(25);<br>
+&nbsp&nbsp&nbsp&nbsp    pole1[z]:=x;<br>
+&nbsp&nbsp&nbsp&nbsp    pole2[z]:=y;<br>
+&nbsp&nbsp&nbsp&nbsp    inc(z);<br>
+&nbsp&nbsp&nbsp&nbsp    gotoxy(x,y);<br>
+&nbsp&nbsp&nbsp&nbsp    write(chr(219));<br>
+&nbsp&nbsp&nbsp&nbsp    delay(50)<br>
+&nbsp&nbsp  until (z=100) or keypressed;<br>
+&nbsp&nbsp  repeat<br>
+&nbsp&nbsp  delay(500);<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  write('opat vysvietit obrazovku? (ak ano, napis A): ');<br>
+&nbsp&nbsp  readln(a);<br>
+&nbsp&nbsp  clrscr;<br>
+&nbsp&nbsp  if a='A' then for j:=0 to 50 do begin<br>
+&nbsp&nbsp&nbsp&nbsp    gotoxy(pole1[j],pole2[j]);<br>
+&nbsp&nbsp&nbsp&nbsp    write(chr(219));<br>
+&nbsp&nbsp&nbsp&nbsp    delay(50);<br>
+&nbsp&nbsp  end;<br>
+&nbsp&nbsp  until a<>'A';<br>
+end.<br>
+
+  </p></div>
+</div>
+
+
+
+<p id="paraP"><a href="#Informatika"><strong>Na zaËiatok str·nky</strong></a></p>
+
+</body>
